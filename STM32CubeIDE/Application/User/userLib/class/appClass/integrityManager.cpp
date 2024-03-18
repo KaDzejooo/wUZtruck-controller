@@ -11,7 +11,6 @@
 #include "ControllerSettings.hpp"
 #include "cmsis_os2.h"
 #include "task.h"
-#include "VehicleInfoRecieved.hpp"
 #include "NotificationFactory.hpp"
 #include "KeyboardDecoder.hpp"
 #include "MessageEncoder.hpp"

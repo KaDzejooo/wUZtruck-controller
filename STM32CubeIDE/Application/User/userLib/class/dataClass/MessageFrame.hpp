@@ -100,6 +100,7 @@ class MessageFrame
 				uint8_t messageIdentifier = 0x44;
 		}messageConst;
 
+
 };
 
 #endif /* MESSAGEFRAME_HPP_ */
