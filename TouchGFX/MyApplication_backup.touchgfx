@@ -1,0 +1,4726 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "startupScreen",
+        "OverrideDefaultBufferSize": true,
+        "CanvasBufferSize": 3600,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "RelativeFilename": "bcground2.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonMain",
+            "Width": 480,
+            "Height": 272,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 480,
+                "Height": 272,
+                "BorderSize": 15,
+                "ColorReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "textureMapper",
+            "X": -70,
+            "Y": -153,
+            "Width": 620,
+            "Height": 578,
+            "UseAnimation": true,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "joyImg.png",
+            "LockBitmapToCenter": true,
+            "XBitmapPosition": 285.0,
+            "YBitmapPosition": 264.0,
+            "XAngle": 6.0,
+            "Scale": 3.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 310.0,
+            "YOrigo": 289.0,
+            "ZOrigo": 100.0,
+            "CameraDistance": 100.0
+          },
+          {
+            "Type": "Box",
+            "Name": "blackBox",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textName",
+            "X": 86,
+            "Y": 10,
+            "Width": 309,
+            "Height": 25,
+            "TextId": "__SingleUse_BIRQ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Moveable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textProp",
+            "X": 403,
+            "Y": 259,
+            "Width": 77,
+            "Height": 13,
+            "TextId": "wUztruck2023",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "imageClick",
+            "X": 216,
+            "Y": 272,
+            "Width": 48,
+            "Height": 48,
+            "RelativeFilename": "materialIcons\\48dp\\power_settings_new_FILL0_wght100_GRAD200_opsz48.png",
+            "Fadeable": true,
+            "Moveable": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "animateTextureMapper",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionRotateTextureMapper",
+              "IsRelative": true,
+              "YAngle": 6.3,
+              "Easing": "Back",
+              "EasingOption": "InOut",
+              "Duration": 1000,
+              "Delay": 50,
+              "ActionComponent": "textureMapper"
+            }
+          },
+          {
+            "InteractionName": "transitionMain",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 1300
+            }
+          },
+          {
+            "InteractionName": "transitionMainEnd",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "transitionMain"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "languageScreen"
+            }
+          },
+          {
+            "InteractionName": "animateName",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 59,
+              "Y": -35,
+              "Easing": "Back",
+              "EasingOption": "In",
+              "Duration": 500,
+              "AnimationDelay": 50,
+              "ActionComponent": "textName"
+            }
+          },
+          {
+            "InteractionName": "animateBlackbox",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionFade",
+              "Alpha": 0,
+              "Easing": "Circ",
+              "EasingOption": "InOut",
+              "Duration": 250,
+              "ActionComponent": "blackBox"
+            }
+          },
+          {
+            "InteractionName": "animateClick",
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 216,
+              "Y": 112,
+              "Easing": "Back",
+              "EasingOption": "Out",
+              "Duration": 500,
+              "AnimationDelay": 100,
+              "ActionComponent": "imageClick"
+            }
+          },
+          {
+            "InteractionName": "animateClickOut",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionFade",
+              "Alpha": 0,
+              "Easing": "Cubic",
+              "EasingOption": "InOut",
+              "Duration": 500,
+              "ActionComponent": "imageClick"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "languageScreen",
+        "OverrideDefaultBufferSize": true,
+        "CanvasBufferSize": 3600,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "RelativeFilename": "bcground2.png"
+          },
+          {
+            "Type": "ListLayout",
+            "Name": "listLang",
+            "X": 90,
+            "Y": 94,
+            "Width": 300,
+            "Height": 85,
+            "Direction": "East",
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "containerPL",
+                "Width": 100,
+                "Height": 85,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "textPL",
+                    "Y": 60,
+                    "Width": 100,
+                    "Height": 25,
+                    "TextId": "__SingleUse_28AA",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "Button",
+                    "Name": "buttonPL",
+                    "Width": 100,
+                    "Height": 60,
+                    "Pressed": "plflag.png",
+                    "Released": "plflag.png"
+                  }
+                ]
+              },
+              {
+                "Type": "Box",
+                "Name": "box",
+                "X": 100,
+                "Width": 100,
+                "Height": 50,
+                "Visible": false,
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "Container",
+                "Name": "containerGB",
+                "X": 200,
+                "Width": 100,
+                "Height": 85,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "textGB",
+                    "Y": 60,
+                    "Width": 100,
+                    "Height": 25,
+                    "TextId": "__SingleUse_LLS3",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "Button",
+                    "Name": "buttonGB",
+                    "Width": 100,
+                    "Height": 60,
+                    "Pressed": "gbflag.png",
+                    "Released": "gbflag.png"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "BoxProgress",
+            "Name": "animationProgress",
+            "X": 140,
+            "Y": 253,
+            "Width": 200,
+            "Height": 5,
+            "Color": {
+              "Red": 255,
+              "Green": 200
+            },
+            "Direction": "Right",
+            "FileNameBackground": "__generated\\alternate_theme_images_widgets_boxprogress_thin_small.png",
+            "IndicatorPositionWidth": 300,
+            "IndicatorPositionHeight": 10,
+            "ProgressRangeMax": 1000
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textTitle",
+            "X": 40,
+            "Y": 6,
+            "Width": 400,
+            "Height": 25,
+            "TextId": "__SingleUse_P3YS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textTitle2",
+            "X": 40,
+            "Y": 31,
+            "Width": 400,
+            "Height": 25,
+            "TextId": "__SingleUse_EO96",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonSkip",
+            "X": 376,
+            "Y": 202,
+            "Width": 104,
+            "Height": 70,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 36,
+                "Y": 13,
+                "IconReleased": "materialIcons\\48dp\\arrow_forward_FILL0_wght100_GRAD200_opsz48.png",
+                "IconPressed": "materialIcons\\48dp\\arrow_forward_FILL0_wght100_GRAD200_opsz48.png"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "waitMain",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 3000
+            }
+          },
+          {
+            "InteractionName": "transitionMain",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "waitMain"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "mainScreen"
+            }
+          },
+          {
+            "InteractionName": "animateProgress",
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Type": "ActionUpdateValue",
+              "Value": 1000,
+              "Duration": 4000,
+              "ActionComponent": "animationProgress"
+            }
+          },
+          {
+            "InteractionName": "langPL",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonPL"
+            },
+            "Action": {
+              "Type": "ActionSetLanguage",
+              "Language": "PL"
+            }
+          },
+          {
+            "InteractionName": "langGB",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonGB"
+            },
+            "Action": {
+              "Type": "ActionSetLanguage",
+              "Language": "GB"
+            }
+          },
+          {
+            "InteractionName": "skipMain",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonSkip"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "mainScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "settingsScreen",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "imageBackground",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "RelativeFilename": "bcground2.png"
+          },
+          {
+            "Type": "Box",
+            "Name": "boxCollide",
+            "Y": 222,
+            "Width": 480,
+            "Height": 50,
+            "Alpha": 36
+          },
+          {
+            "Type": "SwipeContainer",
+            "Name": "swipeContainer",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "SwipeCutoff": 20,
+            "ShowPageIndicator": true,
+            "PageIndicatorX": 216,
+            "PageIndicatorY": 243,
+            "CenteredX": true,
+            "IndicatorImageNormal": "__generated\\dark_theme_images_widgets_swipecontainer_small_off_normal.png",
+            "IndicatorImageHighlight": "__generated\\dark_theme_images_widgets_swipecontainer_small_on_dark.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "swipeContainerPage3",
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "swipeContainerPage1",
+                "Width": 480,
+                "Height": 272,
+                "LockPosition": true,
+                "Components": [
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listLayoutRadio",
+                    "X": 26,
+                    "Y": 71,
+                    "Width": 348,
+                    "Height": 127,
+                    "Direction": "East",
+                    "Components": [
+                      {
+                        "Type": "ListLayout",
+                        "Name": "listRadioMain",
+                        "Width": 116,
+                        "Height": 127,
+                        "Direction": "South",
+                        "Components": [
+                          {
+                            "Type": "TextArea",
+                            "Name": "textRadioTittle",
+                            "Width": 116,
+                            "Height": 15,
+                            "TextId": "__SingleUse_1LM8",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            }
+                          },
+                          {
+                            "Type": "Container",
+                            "Name": "radioButtonCont1",
+                            "Y": 15,
+                            "Width": 116,
+                            "Height": 28,
+                            "Components": [
+                              {
+                                "Type": "RadioButton",
+                                "Name": "radioButton1",
+                                "Width": 24,
+                                "Height": 24,
+                                "FileNameSelected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_dark.png",
+                                "FileNameSelectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+                                "FileNameUnselected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off.png",
+                                "FileNameUnselectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+                                "RadioButtonGroup": "radioGroup",
+                                "Preset": "dark_theme\\presets\\radiobutton\\radio\\small_dark_round_small.json"
+                              },
+                              {
+                                "Type": "TextArea",
+                                "Name": "textRadioButton1",
+                                "X": 27,
+                                "Y": 6,
+                                "Width": 57,
+                                "Height": 13,
+                                "TextId": "__SingleUse_JOKL",
+                                "TextRotation": "0",
+                                "Color": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "AutoSize": true
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Container",
+                            "Name": "radioButtonCont2",
+                            "Y": 43,
+                            "Width": 116,
+                            "Height": 28,
+                            "Components": [
+                              {
+                                "Type": "RadioButton",
+                                "Name": "radioButton2",
+                                "Width": 24,
+                                "Height": 24,
+                                "Selected": true,
+                                "FileNameSelected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_dark.png",
+                                "FileNameSelectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+                                "FileNameUnselected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off.png",
+                                "FileNameUnselectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+                                "RadioButtonGroup": "radioGroup",
+                                "Preset": "dark_theme\\presets\\radiobutton\\radio\\small_dark_round_small.json"
+                              },
+                              {
+                                "Type": "TextArea",
+                                "Name": "textRadioButton2",
+                                "X": 27,
+                                "Y": 6,
+                                "Width": 38,
+                                "Height": 13,
+                                "TextId": "__SingleUse_NFR6",
+                                "TextRotation": "0",
+                                "Color": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "AutoSize": true
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Container",
+                            "Name": "radioButtonCont3",
+                            "Y": 71,
+                            "Width": 116,
+                            "Height": 28,
+                            "Components": [
+                              {
+                                "Type": "RadioButton",
+                                "Name": "radioButton3",
+                                "Width": 24,
+                                "Height": 24,
+                                "FileNameSelected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_dark.png",
+                                "FileNameSelectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+                                "FileNameUnselected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off.png",
+                                "FileNameUnselectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+                                "RadioButtonGroup": "radioGroup",
+                                "Preset": "dark_theme\\presets\\radiobutton\\radio\\small_dark_round_small.json"
+                              },
+                              {
+                                "Type": "TextArea",
+                                "Name": "textRadioButton3",
+                                "X": 27,
+                                "Y": 6,
+                                "Width": 38,
+                                "Height": 13,
+                                "TextId": "__SingleUse_EYZN",
+                                "TextRotation": "0",
+                                "Color": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "AutoSize": true
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Container",
+                            "Name": "radioButtonCont4",
+                            "Y": 99,
+                            "Width": 116,
+                            "Height": 28,
+                            "Components": [
+                              {
+                                "Type": "RadioButton",
+                                "Name": "radioButton4",
+                                "Width": 24,
+                                "Height": 24,
+                                "FileNameSelected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_dark.png",
+                                "FileNameSelectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+                                "FileNameUnselected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off.png",
+                                "FileNameUnselectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+                                "RadioButtonGroup": "radioGroup",
+                                "Preset": "dark_theme\\presets\\radiobutton\\radio\\small_dark_round_small.json"
+                              },
+                              {
+                                "Type": "TextArea",
+                                "Name": "textRadioButton4",
+                                "X": 27,
+                                "Y": 6,
+                                "Width": 26,
+                                "Height": 13,
+                                "TextId": "__SingleUse_REVP",
+                                "TextRotation": "0",
+                                "Color": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "AutoSize": true
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "ListLayout",
+                        "Name": "listRadioLock",
+                        "X": 116,
+                        "Width": 116,
+                        "Height": 99,
+                        "Direction": "South",
+                        "Components": [
+                          {
+                            "Type": "TextArea",
+                            "Name": "textRadioLock",
+                            "Width": 116,
+                            "Height": 15,
+                            "TextId": "__SingleUse_3B5K",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            }
+                          },
+                          {
+                            "Type": "Container",
+                            "Name": "radioButtonContLock1",
+                            "Y": 15,
+                            "Width": 116,
+                            "Height": 28,
+                            "Components": [
+                              {
+                                "Type": "RadioButton",
+                                "Name": "RadioButtonLock1",
+                                "Width": 24,
+                                "Height": 24,
+                                "FileNameSelected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_dark.png",
+                                "FileNameSelectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+                                "FileNameUnselected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off.png",
+                                "FileNameUnselectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+                                "RadioButtonGroup": "radioGroupLock",
+                                "Preset": "dark_theme\\presets\\radiobutton\\radio\\small_dark_round_small.json"
+                              },
+                              {
+                                "Type": "TextArea",
+                                "Name": "textRadioButtonLock1",
+                                "X": 27,
+                                "Y": 6,
+                                "Width": 41,
+                                "Height": 13,
+                                "TextId": "__SingleUse_RG9X",
+                                "TextRotation": "0",
+                                "Color": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "AutoSize": true
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Container",
+                            "Name": "radioButtonContLock2",
+                            "Y": 43,
+                            "Width": 116,
+                            "Height": 28,
+                            "Components": [
+                              {
+                                "Type": "RadioButton",
+                                "Name": "RadioButtonLock2",
+                                "Width": 24,
+                                "Height": 24,
+                                "Selected": true,
+                                "FileNameSelected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_dark.png",
+                                "FileNameSelectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+                                "FileNameUnselected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off.png",
+                                "FileNameUnselectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+                                "RadioButtonGroup": "radioGroupLock",
+                                "Preset": "dark_theme\\presets\\radiobutton\\radio\\small_dark_round_small.json"
+                              },
+                              {
+                                "Type": "TextArea",
+                                "Name": "textRadioButtonLock2",
+                                "X": 27,
+                                "Y": 6,
+                                "Width": 56,
+                                "Height": 13,
+                                "TextId": "__SingleUse_WKUT",
+                                "TextRotation": "0",
+                                "Color": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "AutoSize": true
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Container",
+                            "Name": "radioButtonContLock3",
+                            "Y": 71,
+                            "Width": 116,
+                            "Height": 28,
+                            "Components": [
+                              {
+                                "Type": "RadioButton",
+                                "Name": "RadioButtonLock3",
+                                "Width": 24,
+                                "Height": 24,
+                                "FileNameSelected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_dark.png",
+                                "FileNameSelectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+                                "FileNameUnselected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off.png",
+                                "FileNameUnselectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+                                "RadioButtonGroup": "radioGroupLock",
+                                "Preset": "dark_theme\\presets\\radiobutton\\radio\\small_dark_round_small.json"
+                              },
+                              {
+                                "Type": "TextArea",
+                                "Name": "textRadioButtonLock3",
+                                "X": 27,
+                                "Y": 6,
+                                "Width": 26,
+                                "Height": 13,
+                                "TextId": "__SingleUse_9YL3",
+                                "TextRotation": "0",
+                                "Color": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "AutoSize": true
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "ListLayout",
+                        "Name": "listRadioPerf",
+                        "X": 232,
+                        "Width": 116,
+                        "Height": 99,
+                        "Direction": "South",
+                        "Components": [
+                          {
+                            "Type": "TextArea",
+                            "Name": "textRadioPerfTitle",
+                            "Width": 116,
+                            "Height": 15,
+                            "TextId": "__SingleUse_GI32",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            }
+                          },
+                          {
+                            "Type": "Container",
+                            "Name": "radioButtonContPerf1",
+                            "Y": 15,
+                            "Width": 116,
+                            "Height": 28,
+                            "Components": [
+                              {
+                                "Type": "RadioButton",
+                                "Name": "radioButtonPerf1",
+                                "Width": 24,
+                                "Height": 24,
+                                "FileNameSelected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_dark.png",
+                                "FileNameSelectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+                                "FileNameUnselected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off.png",
+                                "FileNameUnselectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+                                "RadioButtonGroup": "radioGroupPerf",
+                                "Preset": "dark_theme\\presets\\radiobutton\\radio\\small_dark_round_small.json"
+                              },
+                              {
+                                "Type": "TextArea",
+                                "Name": "textRadioButtonPerf1",
+                                "X": 27,
+                                "Y": 6,
+                                "Width": 19,
+                                "Height": 13,
+                                "TextId": "__SingleUse_Y8SO",
+                                "TextRotation": "0",
+                                "Color": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "AutoSize": true
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Container",
+                            "Name": "radioButtonContPerf2",
+                            "Y": 43,
+                            "Width": 116,
+                            "Height": 28,
+                            "Components": [
+                              {
+                                "Type": "RadioButton",
+                                "Name": "radioButtonPerf2",
+                                "Width": 24,
+                                "Height": 24,
+                                "Selected": true,
+                                "FileNameSelected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_dark.png",
+                                "FileNameSelectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+                                "FileNameUnselected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off.png",
+                                "FileNameUnselectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+                                "RadioButtonGroup": "radioGroupPerf",
+                                "Preset": "dark_theme\\presets\\radiobutton\\radio\\small_dark_round_small.json"
+                              },
+                              {
+                                "Type": "TextArea",
+                                "Name": "textRadioButtonPerf2",
+                                "X": 27,
+                                "Y": 6,
+                                "Width": 78,
+                                "Height": 13,
+                                "TextId": "__SingleUse_OZVD",
+                                "TextRotation": "0",
+                                "Color": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "AutoSize": true
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Container",
+                            "Name": "radioButtonContPerf3",
+                            "Y": 71,
+                            "Width": 116,
+                            "Height": 28,
+                            "Components": [
+                              {
+                                "Type": "RadioButton",
+                                "Name": "radioButtonPerf3",
+                                "Width": 24,
+                                "Height": 24,
+                                "FileNameSelected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_dark.png",
+                                "FileNameSelectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_on_pressed.png",
+                                "FileNameUnselected": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off.png",
+                                "FileNameUnselectedPressed": "__generated\\dark_theme_images_widgets_radiobutton_radio_small_round_off_pressed.png",
+                                "RadioButtonGroup": "radioGroupPerf",
+                                "Preset": "dark_theme\\presets\\radiobutton\\radio\\small_dark_round_small.json"
+                              },
+                              {
+                                "Type": "TextArea",
+                                "Name": "textRadioButtonPerf3",
+                                "X": 27,
+                                "Y": 6,
+                                "Width": 12,
+                                "Height": 13,
+                                "TextId": "__SingleUse_63B8",
+                                "TextRotation": "0",
+                                "Color": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "AutoSize": true
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainerPage2",
+                "Width": 480,
+                "Height": 272,
+                "LockPosition": true,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea5",
+                    "X": 339,
+                    "Y": 188,
+                    "Width": 91,
+                    "Height": 13,
+                    "TextId": "__SingleUse_C955",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea4",
+                    "X": 339,
+                    "Y": 149,
+                    "Width": 57,
+                    "Height": 13,
+                    "TextId": "__SingleUse_9H72",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea3",
+                    "X": 339,
+                    "Y": 109,
+                    "Width": 102,
+                    "Height": 13,
+                    "TextId": "__SingleUse_0XQ0",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea2",
+                    "X": 339,
+                    "Y": 68,
+                    "Width": 84,
+                    "Height": 13,
+                    "TextId": "__SingleUse_8JA7",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "Slider",
+                    "Name": "slider4",
+                    "X": 7,
+                    "Y": 182,
+                    "Width": 324,
+                    "Height": 24,
+                    "IsHorizontalSlider": true,
+                    "BackgroundUnselected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thin_track_medium.png",
+                    "BackgroundSelected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thin_filler_medium.png",
+                    "Indicator": "generated_edited\\gray_slider_horizontal_thin_round_light.png",
+                    "BackgroundX": 12,
+                    "BackgroundY": 9,
+                    "IndicatorMax": 300,
+                    "ValueMax": 100,
+                    "InitValue": 10
+                  },
+                  {
+                    "Type": "Slider",
+                    "Name": "slider1",
+                    "X": 11,
+                    "Y": 143,
+                    "Width": 324,
+                    "Height": 24,
+                    "IsHorizontalSlider": true,
+                    "BackgroundUnselected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thin_track_medium.png",
+                    "BackgroundSelected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thin_filler_medium.png",
+                    "Indicator": "generated_edited\\gray_slider_horizontal_thin_round_light.png",
+                    "BackgroundX": 12,
+                    "BackgroundY": 9,
+                    "IndicatorMax": 300,
+                    "ValueMax": 100,
+                    "InitValue": 40
+                  },
+                  {
+                    "Type": "Slider",
+                    "Name": "sliderSmooth",
+                    "X": 7,
+                    "Y": 103,
+                    "Width": 324,
+                    "Height": 24,
+                    "IsHorizontalSlider": true,
+                    "BackgroundUnselected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thin_track_medium.png",
+                    "BackgroundSelected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thin_filler_medium.png",
+                    "Indicator": "generated_edited\\gray_slider_horizontal_thin_round_light.png",
+                    "BackgroundX": 12,
+                    "BackgroundY": 9,
+                    "IndicatorMax": 300,
+                    "ValueMax": 100,
+                    "InitValue": 80
+                  },
+                  {
+                    "Type": "Slider",
+                    "Name": "sliderExpo",
+                    "X": 7,
+                    "Y": 62,
+                    "Width": 324,
+                    "Height": 24,
+                    "IsHorizontalSlider": true,
+                    "BackgroundUnselected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thin_track_medium.png",
+                    "BackgroundSelected": "__generated\\alternate_theme_images_widgets_slider_horizontal_thin_filler_medium.png",
+                    "Indicator": "generated_edited\\gray_slider_horizontal_thin_round_light.png",
+                    "BackgroundX": 12,
+                    "BackgroundY": 9,
+                    "IndicatorMax": 300,
+                    "ValueMax": 100,
+                    "InitValue": 50
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainerPage3",
+                "Width": 480,
+                "Height": 272,
+                "LockPosition": true,
+                "Components": [
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listLayout1",
+                    "X": 7,
+                    "Y": 71,
+                    "Width": 190,
+                    "Height": 50,
+                    "Direction": "South",
+                    "Components": [
+                      {
+                        "Type": "Container",
+                        "Name": "container1_1",
+                        "Width": 190,
+                        "Height": 25,
+                        "Components": [
+                          {
+                            "Type": "FlexButton",
+                            "Name": "flexButton1_1",
+                            "Width": 190,
+                            "Height": 25,
+                            "ButtonTrigger": {
+                              "Type": "ToggleButtonTrigger"
+                            },
+                            "ButtonStyles": [
+                              {
+                                "Type": "IconButtonStyle",
+                                "X": 160,
+                                "IconReleased": "materialIcons\\24dp\\toggle_off_FILL0_wght100_GRAD200_opsz24.png",
+                                "IconPressed": "materialIcons\\24dp\\toggle_on_FILL0_wght100_GRAD200_opsz24.png"
+                              },
+                              {
+                                "Type": "TextButtonStyle",
+                                "Y": 5,
+                                "TextId": "__SingleUse_VOEU",
+                                "TextRotation": "0",
+                                "ColorReleased": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "ColorPressed": {
+                                  "Green": 255
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Container",
+                        "Name": "container1",
+                        "Y": 25,
+                        "Width": 190,
+                        "Height": 25,
+                        "Components": [
+                          {
+                            "Type": "FlexButton",
+                            "Name": "buttonAudio",
+                            "Width": 190,
+                            "Height": 25,
+                            "ButtonTrigger": {
+                              "Type": "ToggleButtonTrigger"
+                            },
+                            "ButtonStyles": [
+                              {
+                                "Type": "IconButtonStyle",
+                                "X": 160,
+                                "IconReleased": "materialIcons\\24dp\\toggle_off_FILL0_wght100_GRAD200_opsz24.png",
+                                "IconPressed": "materialIcons\\24dp\\toggle_on_FILL0_wght100_GRAD200_opsz24.png"
+                              },
+                              {
+                                "Type": "TextButtonStyle",
+                                "Y": 5,
+                                "TextId": "__SingleUse_476I",
+                                "TextRotation": "0",
+                                "ColorReleased": {
+                                  "Red": 255,
+                                  "Green": 255,
+                                  "Blue": 255
+                                },
+                                "ColorPressed": {
+                                  "Green": 255
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "FlexButton",
+                    "Name": "buttonReset",
+                    "X": 411,
+                    "Y": 7,
+                    "Width": 60,
+                    "Height": 60,
+                    "ButtonTrigger": {
+                      "Type": "ClickButtonTrigger"
+                    },
+                    "ButtonStyles": [
+                      {
+                        "Type": "TextButtonStyle",
+                        "Y": 46,
+                        "TextId": "__SingleUse_CAZJ",
+                        "TextRotation": "0",
+                        "ColorReleased": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "ColorPressed": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        }
+                      },
+                      {
+                        "Type": "IconButtonStyle",
+                        "X": 6,
+                        "IconReleased": "materialIcons\\48dp\\restart_alt_FILL0_wght100_GRAD200_opsz48.png",
+                        "IconPressed": "materialIcons\\48dp\\restart_alt_FILL0_wght100_GRAD200_opsz48.png"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainerPage4",
+                "Width": 480,
+                "Height": 272,
+                "LockPosition": true,
+                "Components": [
+                  {
+                    "Type": "FlexButton",
+                    "Name": "buttonAuthors",
+                    "X": 165,
+                    "Y": 67,
+                    "Width": 150,
+                    "Height": 150,
+                    "ButtonTrigger": {
+                      "Type": "ClickButtonTrigger"
+                    },
+                    "ButtonStyles": [
+                      {
+                        "Type": "IconButtonStyle",
+                        "X": 51,
+                        "Y": 53,
+                        "IconReleased": "materialIcons\\48dp\\groups_FILL0_wght100_GRAD200_opsz48.png",
+                        "IconPressed": "materialIcons\\48dp\\groups_FILL0_wght100_GRAD200_opsz48.png"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "FlexButton",
+                    "Name": "buttonSuperSecret",
+                    "X": 328,
+                    "Y": 11,
+                    "Width": 139,
+                    "Height": 125,
+                    "ButtonTrigger": {
+                      "Type": "ClickButtonTrigger"
+                    },
+                    "ButtonStyles": [
+                      {
+                        "Type": "IconButtonStyle",
+                        "IconPressed": "materialIcons\\48dp\\done_FILL0_wght100_GRAD200_opsz48.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "buttonMain",
+            "X": 7,
+            "Y": 8,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "clickZone50px.png",
+            "Released": "clickZone50px.png",
+            "IconPressed": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconReleased": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconHeight": 48,
+            "IconWidth": 48
+          },
+          {
+            "Type": "Image",
+            "Name": "imageTutorial",
+            "X": 432,
+            "Y": 223,
+            "Width": 48,
+            "Height": 48,
+            "RelativeFilename": "materialIcons\\48dp\\swipe_right_FILL0_wght100_GRAD200_opsz48.png",
+            "Moveable": true
+          },
+          {
+            "Type": "ModalWindow",
+            "Name": "confirmWindow",
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "FileName": "windowBackground400220_2.png",
+            "ModalX": 40,
+            "ModalY": 26,
+            "ModalWidth": 400,
+            "ModalHeight": 220,
+            "Alpha": 161,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "textTitle",
+                "X": 66,
+                "Y": 1,
+                "Width": 269,
+                "Height": 40,
+                "TextId": "__SingleUse_4Q2X",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textPrompt",
+                "X": 44,
+                "Y": 49,
+                "Width": 313,
+                "Height": 13,
+                "TextId": "__SingleUse_QGI4",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "resetButton",
+                "X": 255,
+                "Y": 147,
+                "Width": 60,
+                "Height": 60,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "Y": 45,
+                    "TextId": "__SingleUse_UTSH",
+                    "TextRotation": "0",
+                    "ColorReleased": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "ColorPressed": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "IconButtonStyle",
+                    "X": 7,
+                    "IconReleased": "materialIcons\\48dp\\done_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconPressed": "materialIcons\\48dp\\done_FILL0_wght100_GRAD200_opsz48.png"
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "goBackButton",
+                "X": 95,
+                "Y": 147,
+                "Width": 60,
+                "Height": 60,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "Y": 45,
+                    "TextId": "__SingleUse_BWME",
+                    "TextRotation": "0",
+                    "ColorReleased": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "ColorPressed": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "IconButtonStyle",
+                    "X": 5,
+                    "IconReleased": "materialIcons\\48dp\\arrow_back_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconPressed": "materialIcons\\48dp\\arrow_back_FILL0_wght100_GRAD200_opsz48.png"
+                  }
+                ]
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textPrompt2",
+                "X": 95,
+                "Y": 62,
+                "Width": 210,
+                "Height": 13,
+                "TextId": "__SingleUse_N3MK",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "transitionMain",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "mainScreen"
+            }
+          },
+          {
+            "InteractionName": "transitionAuthors",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonAuthors"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "authorScreen"
+            }
+          },
+          {
+            "InteractionName": "animateTutorial",
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "Easing": "Linear",
+              "EasingOption": "In"
+            }
+          },
+          {
+            "InteractionName": "animateConfirm",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "goBackButton"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "confirmWindow"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "lightsScreen",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "RelativeFilename": "bcground2.png"
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "buttonMain",
+            "X": 7,
+            "Y": 6,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "clickZone50px.png",
+            "Released": "clickZone50px.png",
+            "IconPressed": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconReleased": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconHeight": 48,
+            "IconWidth": 48
+          },
+          {
+            "Type": "ListLayout",
+            "Name": "listLights",
+            "X": 7,
+            "Y": 81,
+            "Width": 50,
+            "Height": 60,
+            "Direction": "East",
+            "Components": []
+          },
+          {
+            "Type": "ListLayout",
+            "Name": "listLightsTwo",
+            "X": 7,
+            "Y": 141,
+            "Width": 50,
+            "Height": 60,
+            "Direction": "East",
+            "Components": []
+          },
+          {
+            "Type": "ListLayout",
+            "Name": "listGear",
+            "X": 350,
+            "Y": 207,
+            "Width": 50,
+            "Height": 60,
+            "Direction": "East",
+            "Components": []
+          },
+          {
+            "Type": "Image",
+            "Name": "imageWinch",
+            "X": 320,
+            "Width": 160,
+            "Height": 206,
+            "RelativeFilename": "awinchbcgrROUND.png"
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "X": 320,
+            "Width": 160,
+            "Height": 206,
+            "Visible": false,
+            "Alpha": 81
+          },
+          {
+            "Type": "SwipeContainer",
+            "Name": "swipeContainer",
+            "X": 320,
+            "Width": 160,
+            "Height": 206,
+            "SwipeCutoff": 20,
+            "ShowPageIndicator": true,
+            "PageIndicatorX": 32,
+            "PageIndicatorY": 6,
+            "CenteredX": true,
+            "IndicatorImageNormal": "__generated\\dark_theme_images_widgets_swipecontainer_small_off_normal.png",
+            "IndicatorImageHighlight": "__generated\\dark_theme_images_widgets_swipecontainer_small_on_dark.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "pageArmTwo",
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "pageForkTwo",
+                "Width": 160,
+                "Height": 206,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "textForkTwo",
+                    "X": 30,
+                    "Y": 140,
+                    "Width": 100,
+                    "Height": 21,
+                    "TextId": "__SingleUse_D7KM",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listForkTwo",
+                    "X": 55,
+                    "Y": 25,
+                    "Width": 50,
+                    "Height": 60,
+                    "Direction": "South",
+                    "Components": []
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "pageForkOne",
+                "Width": 160,
+                "Height": 206,
+                "Components": [
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listForkOne",
+                    "X": 55,
+                    "Y": 25,
+                    "Width": 50,
+                    "Height": 60,
+                    "Direction": "South",
+                    "Components": []
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textForkOne",
+                    "X": 30,
+                    "Y": 140,
+                    "Width": 100,
+                    "Height": 21,
+                    "TextId": "__SingleUse_H95O",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "pageArmTwo",
+                "Width": 160,
+                "Height": 206,
+                "Components": [
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listArmTwo",
+                    "X": 55,
+                    "Y": 25,
+                    "Width": 50,
+                    "Height": 60,
+                    "Direction": "South",
+                    "Components": []
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArmTwo",
+                    "X": 30,
+                    "Y": 140,
+                    "Width": 100,
+                    "Height": 21,
+                    "TextId": "__SingleUse_O33W",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "pageArmOne",
+                "Width": 160,
+                "Height": 206,
+                "Components": [
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listArmOne",
+                    "X": 55,
+                    "Y": 25,
+                    "Width": 50,
+                    "Height": 60,
+                    "Direction": "South",
+                    "Components": []
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArmOne",
+                    "X": 30,
+                    "Y": 140,
+                    "Width": 100,
+                    "Height": 21,
+                    "TextId": "__SingleUse_ED5Z",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "pageLeftSupport",
+                "Width": 160,
+                "Height": 206,
+                "Components": [
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listLeftSupport",
+                    "X": 55,
+                    "Y": 25,
+                    "Width": 50,
+                    "Height": 60,
+                    "Direction": "South",
+                    "Components": []
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textLeftSupport",
+                    "X": 30,
+                    "Y": 140,
+                    "Width": 100,
+                    "Height": 21,
+                    "TextId": "__SingleUse_Q2NN",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "pageRightSupport",
+                "Width": 160,
+                "Height": 206,
+                "Components": [
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listRightSupport",
+                    "X": 55,
+                    "Y": 25,
+                    "Width": 50,
+                    "Height": 60,
+                    "Direction": "South",
+                    "Components": []
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textRightSupport",
+                    "X": 30,
+                    "Y": 140,
+                    "Width": 100,
+                    "Height": 21,
+                    "TextId": "__SingleUse_OO6V",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "pageWinchSecond",
+                "Width": 160,
+                "Height": 206,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "textWinchSecond",
+                    "X": 30,
+                    "Y": 140,
+                    "Width": 100,
+                    "Height": 21,
+                    "TextId": "__SingleUse_0MQW",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listWinchSecond",
+                    "X": 55,
+                    "Y": 25,
+                    "Width": 50,
+                    "Height": 60,
+                    "Direction": "South",
+                    "Components": []
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "pageWinchFirst",
+                "Width": 160,
+                "Height": 206,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "textWinchFirst",
+                    "X": 30,
+                    "Y": 140,
+                    "Width": 100,
+                    "Height": 21,
+                    "TextId": "__SingleUse_67V4",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  },
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listWinchFirst",
+                    "X": 55,
+                    "Y": 25,
+                    "Width": 50,
+                    "Height": 60,
+                    "Direction": "South",
+                    "Components": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "ListLayout",
+            "Name": "listFunc",
+            "X": 7,
+            "Y": 201,
+            "Width": 50,
+            "Height": 60,
+            "Direction": "East",
+            "Components": []
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 270,
+            "Y": 207,
+            "Width": 50,
+            "Height": 60,
+            "Alpha": 80
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 282,
+            "Y": 213,
+            "Width": 26,
+            "Height": 49,
+            "TextId": "__SingleUse_CR0S",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "Gear",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "transitionMain",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "mainScreen"
+            }
+          },
+          {
+            "InteractionName": "animateSlideMenu",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionNone"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "camScreen",
+        "Components": [
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "buttonMain",
+            "X": 7,
+            "Y": 8,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "clickZone50px.png",
+            "Released": "clickZone50px.png",
+            "IconPressed": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconReleased": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconHeight": 48,
+            "IconWidth": 48
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "transitionMain",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "mainScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "mainScreen",
+        "OverrideDefaultBufferSize": true,
+        "CanvasBufferSize": 9000,
+        "Includes": "",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "imageBackground",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "RelativeFilename": "bcground2.png"
+          },
+          {
+            "Type": "Container",
+            "Name": "containerMainScreenDataDisplay",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "containerGaugeMain",
+                "X": 90,
+                "Y": 63,
+                "Width": 300,
+                "Height": 150,
+                "Visible": false,
+                "IsCacheableContainer": true,
+                "Components": [
+                  {
+                    "Type": "Circle",
+                    "Name": "circleRPMBcg",
+                    "X": 150,
+                    "Width": 150,
+                    "Height": 150,
+                    "CenterX": 75.0,
+                    "CenterY": 75.0,
+                    "Radius": 69.7,
+                    "StartAngle": -113.4,
+                    "EndAngle": 113.4,
+                    "CapPrecision": "Triangle",
+                    "Alpha": 80
+                  },
+                  {
+                    "Type": "Gauge",
+                    "Name": "gaugeRPM",
+                    "X": 150,
+                    "Width": 150,
+                    "Height": 150,
+                    "FileNameBackground": "clickZone50px.png",
+                    "BackgroundOffsetX": 50.0,
+                    "BackgroundOffsetY": 50.0,
+                    "RotationCenterX": 75.0,
+                    "RotationCenterY": 75.0,
+                    "StartAngle": -100.0,
+                    "EndAngle": 100.0,
+                    "RangeMax": 100.0,
+                    "InitialValue": 100.0,
+                    "UseAnimation": true,
+                    "Easing": "Cubic",
+                    "EasingOption": "InOut",
+                    "FileNameNeedle": "__generated\\glass_theme_images_widgets_gauge_small_needles_rough.png",
+                    "NeedleRotationCenterX": 8.0,
+                    "NeedleRotationCenterY": 53.0,
+                    "NeedleMovingRenderingAlgorithm": "Nearest-neighbor",
+                    "NeedleSteadyRenderingAlgorithm": "Nearest-neighbor",
+                    "UseArc": true,
+                    "FileNameArc": "gaugeBackgroundBack.png",
+                    "ArcColor": {
+                      "Red": 20,
+                      "Green": 151,
+                      "Blue": 197
+                    },
+                    "SetArcPosition": true,
+                    "ArcX": 13.2,
+                    "ArcY": 15.6,
+                    "ArcWidth": 120.0,
+                    "ArcHeight": 120.0,
+                    "ArcRadius": 47.2,
+                    "ArcLineWidth": 15.0,
+                    "ArcCapStyle": "Butt"
+                  },
+                  {
+                    "Type": "Circle",
+                    "Name": "circleSpeedBcg",
+                    "X": 1,
+                    "Width": 150,
+                    "Height": 150,
+                    "CenterX": 75.0,
+                    "CenterY": 75.0,
+                    "Radius": 69.7,
+                    "StartAngle": -113.4,
+                    "EndAngle": 113.4,
+                    "CapPrecision": "Triangle",
+                    "Alpha": 80
+                  },
+                  {
+                    "Type": "Gauge",
+                    "Name": "gaugeSpeed",
+                    "X": 1,
+                    "Width": 150,
+                    "Height": 150,
+                    "FileNameBackground": "a150x50bcg.png",
+                    "BackgroundOffsetX": 15.0,
+                    "BackgroundOffsetY": 15.0,
+                    "RotationCenterX": 75.0,
+                    "RotationCenterY": 75.0,
+                    "StartAngle": -100.0,
+                    "EndAngle": 100.0,
+                    "RangeMax": 100.0,
+                    "InitialValue": 100.0,
+                    "UseAnimation": true,
+                    "Easing": "Bounce",
+                    "EasingOption": "InOut",
+                    "FileNameNeedle": "__generated\\glass_theme_images_widgets_gauge_small_needles_rough.png",
+                    "NeedleRotationCenterX": 8.0,
+                    "NeedleRotationCenterY": 53.0,
+                    "NeedleMovingRenderingAlgorithm": "Nearest-neighbor",
+                    "NeedleSteadyRenderingAlgorithm": "Nearest-neighbor",
+                    "UseArc": true,
+                    "FileNameArc": "gaugeBackgroundBack2.png",
+                    "ArcColor": {
+                      "Red": 20,
+                      "Green": 151,
+                      "Blue": 197
+                    },
+                    "SetArcPosition": true,
+                    "ArcX": 13.9,
+                    "ArcY": 17.9,
+                    "ArcWidth": 130.0,
+                    "ArcHeight": 130.0,
+                    "ArcRadius": 45.5,
+                    "ArcLineWidth": 32.7,
+                    "ArcCapStyle": "Butt"
+                  },
+                  {
+                    "Type": "LineProgress",
+                    "Name": "lineBatteryTruck",
+                    "X": 36,
+                    "Y": 97,
+                    "Width": 45,
+                    "Height": 20,
+                    "FileNameProgress": "__generated\\dark_theme_images_widgets_lineprogress_fillers_styled_batteries_battery_small_dark_0.png",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "StartY": 10.0,
+                    "EndY": 10.0,
+                    "EndX": 45.0,
+                    "LineWidth": 20.0,
+                    "LineEndingStyle": "Butt",
+                    "FileNameBackground": "generated_edited\\dark_theme_images_widgets_lineprogress_backgrounds_image_styled_batteries_battery_small_1.png",
+                    "ProgressRangeMax": 100,
+                    "ProgressRangeSteps": 10,
+                    "ProgressInitialValue": 41
+                  },
+                  {
+                    "Type": "LineProgress",
+                    "Name": "lineBatteryController",
+                    "X": 225,
+                    "Y": 97,
+                    "Width": 45,
+                    "Height": 20,
+                    "FileNameProgress": "generated_edited\\dark_theme_images_widgets_lineprogress_fillers_styled_batteries_battery_small_active_1.png",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "StartY": 10.0,
+                    "EndY": 10.0,
+                    "EndX": 45.0,
+                    "LineWidth": 20.0,
+                    "LineEndingStyle": "Butt",
+                    "FileNameBackground": "generated_edited\\dark_theme_images_widgets_lineprogress_backgrounds_image_styled_batteries_battery_small_1.png",
+                    "ProgressRangeMax": 100,
+                    "ProgressRangeSteps": 10,
+                    "ProgressInitialValue": 67
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "imageJoyBattery",
+                    "X": 192,
+                    "Y": 95,
+                    "Width": 24,
+                    "Height": 24,
+                    "RelativeFilename": "materialIcons\\24dp\\joystick_FILL0_wght100_GRAD200_opsz24.png"
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "imageTruckBattery",
+                    "X": 90,
+                    "Y": 95,
+                    "Width": 24,
+                    "Height": 24,
+                    "RelativeFilename": "materialIcons\\24dp\\local_shipping_FILL0_wght100_GRAD200_opsz24.png"
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "containerStatus",
+                    "X": 136,
+                    "Width": 30,
+                    "Height": 30,
+                    "Components": [
+                      {
+                        "Type": "Circle",
+                        "Name": "circleStatusBackground",
+                        "Width": 30,
+                        "Height": 30,
+                        "CenterX": 15.0,
+                        "CenterY": 15.0,
+                        "Radius": 15.0,
+                        "EndAngle": 360.0,
+                        "CapPrecision": "Butt",
+                        "Alpha": 80
+                      },
+                      {
+                        "Type": "Image",
+                        "Name": "imageStatus",
+                        "X": 3,
+                        "Y": 3,
+                        "Width": 24,
+                        "Height": 24,
+                        "RelativeFilename": "materialIcons\\24dp\\check_circle_FILL0_wght100_GRAD200_opsz24.png"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "containerParams",
+                "X": 100,
+                "Y": 9,
+                "Width": 250,
+                "Height": 250,
+                "Visible": false,
+                "Components": [
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listStatus",
+                    "X": 6,
+                    "Y": 43,
+                    "Width": 127,
+                    "Height": 100,
+                    "Direction": "South",
+                    "Components": [
+                      {
+                        "Type": "Container",
+                        "Name": "containerController",
+                        "Width": 127,
+                        "Height": 24,
+                        "Components": [
+                          {
+                            "Type": "Image",
+                            "Name": "imageBattery",
+                            "Width": 24,
+                            "Height": 24,
+                            "RelativeFilename": "materialIcons\\24dp\\battery_full_FILL0_wght100_GRAD200_opsz24_TEMP.png"
+                          },
+                          {
+                            "Type": "BoxProgress",
+                            "Name": "batteryController_1",
+                            "X": 27,
+                            "Y": 15,
+                            "Width": 100,
+                            "Height": 5,
+                            "Color": {
+                              "Green": 240,
+                              "Blue": 255
+                            },
+                            "Direction": "Right",
+                            "FileNameBackground": "__generated\\alternate_theme_images_widgets_boxprogress_thin_tiny.png",
+                            "IndicatorPositionWidth": 100,
+                            "IndicatorPositionHeight": 10,
+                            "ProgressRangeMax": 100,
+                            "ProgressInitialValue": 48
+                          },
+                          {
+                            "Type": "TextArea",
+                            "Name": "textController_1",
+                            "X": 27,
+                            "Y": 1,
+                            "Width": 99,
+                            "Height": 13,
+                            "TextId": "__SingleUse_3X56",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Container",
+                        "Name": "containerTruck",
+                        "Y": 24,
+                        "Width": 127,
+                        "Height": 24,
+                        "Components": [
+                          {
+                            "Type": "Image",
+                            "Name": "imageTruck",
+                            "Width": 24,
+                            "Height": 24,
+                            "RelativeFilename": "materialIcons\\24dp\\battery_full_FILL0_wght100_GRAD200_opsz24_TEMP.png"
+                          },
+                          {
+                            "Type": "BoxProgress",
+                            "Name": "batteryTruck_1",
+                            "X": 27,
+                            "Y": 15,
+                            "Width": 100,
+                            "Height": 5,
+                            "Color": {
+                              "Green": 240,
+                              "Blue": 255
+                            },
+                            "Direction": "Right",
+                            "FileNameBackground": "__generated\\alternate_theme_images_widgets_boxprogress_thin_tiny.png",
+                            "IndicatorPositionWidth": 100,
+                            "IndicatorPositionHeight": 10,
+                            "ProgressRangeMax": 100,
+                            "ProgressInitialValue": 15
+                          },
+                          {
+                            "Type": "TextArea",
+                            "Name": "textTruck_1",
+                            "X": 27,
+                            "Y": 1,
+                            "Width": 99,
+                            "Height": 13,
+                            "TextId": "__SingleUse_XNM6",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Container",
+                        "Name": "containerConnectedTrailer",
+                        "Y": 48,
+                        "Width": 127,
+                        "Height": 26,
+                        "Components": [
+                          {
+                            "Type": "TextArea",
+                            "Name": "textTrailerConnection",
+                            "X": 27,
+                            "Width": 100,
+                            "Height": 26,
+                            "TextId": "__SingleUse_CEFR",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            },
+                            "Wildcard1": {
+                              "TextId": "__SingleUse_SDY4",
+                              "UseBuffer": true,
+                              "BufferSize": 17
+                            }
+                          },
+                          {
+                            "Type": "Image",
+                            "Name": "imageTrailerConnected",
+                            "Y": 1,
+                            "Width": 24,
+                            "Height": 24,
+                            "RelativeFilename": "materialIcons\\24dp\\rv_hookup_FILL0_wght100_GRAD200_opsz24.png"
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Container",
+                        "Name": "containerConnected",
+                        "Y": 74,
+                        "Width": 127,
+                        "Height": 26,
+                        "Components": [
+                          {
+                            "Type": "TextArea",
+                            "Name": "textTruckConnection",
+                            "X": 27,
+                            "Width": 100,
+                            "Height": 26,
+                            "TextId": "__SingleUse_WDOZ",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            },
+                            "Wildcard1": {
+                              "TextId": "__SingleUse_XSKB",
+                              "UseBuffer": true,
+                              "BufferSize": 17
+                            }
+                          },
+                          {
+                            "Type": "Image",
+                            "Name": "imageTruckConnected",
+                            "Y": 1,
+                            "Width": 24,
+                            "Height": 24,
+                            "RelativeFilename": "materialIcons\\24dp\\local_shipping_FILL0_wght100_GRAD200_opsz24.png"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "image1",
+                    "X": 135,
+                    "Y": 42,
+                    "Width": 50,
+                    "Height": 50,
+                    "RelativeFilename": "joyImg.png"
+                  },
+                  {
+                    "Type": "ScalableImage",
+                    "Name": "scalableImage1",
+                    "X": 135,
+                    "Y": 95,
+                    "Width": 50,
+                    "Height": 60,
+                    "Filename": "joyImg.png",
+                    "ScalingAlgorithm": "Nearest-neighbor"
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "containerCamera",
+                "X": 112,
+                "Y": 43,
+                "Width": 256,
+                "Height": 144,
+                "Visible": false,
+                "Components": [
+                  {
+                    "Type": "FlexButton",
+                    "Name": "buttonCamer",
+                    "Width": 256,
+                    "Height": 144,
+                    "ButtonTrigger": {
+                      "Type": "ClickButtonTrigger"
+                    },
+                    "ButtonStyles": [
+                      {
+                        "Type": "IconButtonStyle",
+                        "X": 108,
+                        "Y": 47,
+                        "IconReleased": "materialIcons\\48dp\\videocam_FILL0_wght100_GRAD200_opsz48.png",
+                        "IconPressed": "materialIcons\\48dp\\videocam_FILL0_wght100_GRAD200_opsz48.png"
+                      },
+                      {
+                        "Type": "BoxWithBorderButtonStyle",
+                        "Width": 256,
+                        "Height": 144,
+                        "LockToFlexButtonSize": true,
+                        "BorderSize": 5,
+                        "ColorReleased": {
+                          "Red": 17,
+                          "Green": 41,
+                          "Blue": 54
+                        },
+                        "ColorPressed": {
+                          "Red": 255
+                        },
+                        "ColorBorderReleased": {
+                          "Red": 255
+                        },
+                        "ColorBorderPressed": {
+                          "Red": 51,
+                          "Green": 102,
+                          "Blue": 153
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "SlideMenu",
+            "Name": "slideGear",
+            "Y": 113,
+            "Width": 150,
+            "Height": 50,
+            "FileNameBackground": "a150x50bcg.png",
+            "FileNameButtonPressed": "",
+            "FileNameButtonReleased": "",
+            "State": "Collapsed",
+            "ExpandDirection": "East",
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "AnimationDuration": 300,
+            "VisiblePixelsWhenCollapsed": 52,
+            "ExpandedStateTimeout": 3000,
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "gearDisp",
+                "X": 100,
+                "Y": 1,
+                "Width": 50,
+                "Height": 50,
+                "Components": [
+                  {
+                    "Type": "Circle",
+                    "Name": "circleBackground",
+                    "X": -15,
+                    "Y": -15,
+                    "Width": 80,
+                    "Height": 80,
+                    "Visible": false,
+                    "CenterX": 40.0,
+                    "CenterY": 40.0,
+                    "Radius": 20.0,
+                    "EndAngle": 360.0,
+                    "CapPrecision": "Butt",
+                    "Alpha": 80
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "imageBcground",
+                    "Y": 1,
+                    "Width": 48,
+                    "Height": 48,
+                    "RelativeFilename": "materialIcons\\48dp\\settings_FILL0_wght100_GRAD200_opsz48_1.png"
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textGear",
+                    "X": 11,
+                    "Y": 13,
+                    "Width": 25,
+                    "Height": 25,
+                    "TextId": "__SingleUse_MPMW",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "LineSpacing": 6
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "buttonGearDown",
+                "Width": 50,
+                "Height": 50,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "IconButtonStyle",
+                    "IconReleased": "materialIcons\\48dp\\expand_more_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconPressed": "materialIcons\\48dp\\expand_more_FILL0_wght100_GRAD200_opsz48.png"
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "buttonGearUp",
+                "X": 50,
+                "Width": 50,
+                "Height": 50,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "IconButtonStyle",
+                    "IconReleased": "materialIcons\\48dp\\expand_less_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconPressed": "materialIcons\\48dp\\expand_less_FILL0_wght100_GRAD200_opsz48.png"
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "buttonGearShow",
+                "X": 100,
+                "Width": 50,
+                "Height": 50,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "IconButtonStyle"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "SlideMenu",
+            "Name": "slideBar",
+            "Width": 480,
+            "Height": 75,
+            "LockPosition": true,
+            "FileNameBackground": "bcgroundslide48075.png",
+            "FileNameButtonPressed": "",
+            "FileNameButtonReleased": "",
+            "State": "Collapsed",
+            "ExpandDirection": "South",
+            "Easing": "Quint",
+            "EasingOption": "Out",
+            "AnimationDuration": 300,
+            "VisiblePixelsWhenCollapsed": 25,
+            "ExpandedStateTimeout": 5000,
+            "Components": [
+              {
+                "Type": "FlexButton",
+                "Name": "buttonBar",
+                "X": -1,
+                "Width": 240,
+                "Height": 110,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "IconButtonStyle",
+                    "X": -4,
+                    "Y": 40,
+                    "IconReleased": "materialIcons\\48dp\\expand_more_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconPressed": "materialIcons\\48dp\\expand_more_FILL0_wght100_GRAD200_opsz48.png"
+                  }
+                ]
+              },
+              {
+                "Type": "ListLayout",
+                "Name": "listLeft",
+                "Width": 300,
+                "Height": 50,
+                "Direction": "East",
+                "Components": [
+                  {
+                    "Type": "ButtonWithIcon",
+                    "Name": "buttonTurnOn",
+                    "Width": 50,
+                    "Height": 50,
+                    "Pressed": "clickZone50px.png",
+                    "Released": "clickZone50px.png",
+                    "IconPressed": "materialIcons\\48dp\\power_settings_new_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconReleased": "materialIcons\\48dp\\power_settings_new_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconHeight": 48,
+                    "IconWidth": 48
+                  },
+                  {
+                    "Type": "ButtonWithIcon",
+                    "Name": "buttonLights",
+                    "X": 50,
+                    "Width": 50,
+                    "Height": 50,
+                    "Pressed": "clickZone50px.png",
+                    "Released": "clickZone50px.png",
+                    "IconPressed": "materialIcons\\48dp\\widgets_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconReleased": "materialIcons\\48dp\\widgets_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconX": 1,
+                    "IconY": 1,
+                    "IconHeight": 48,
+                    "IconWidth": 48
+                  },
+                  {
+                    "Type": "FlexButton",
+                    "Name": "buttonTruckChange2",
+                    "X": 100,
+                    "Width": 50,
+                    "Height": 50,
+                    "ButtonTrigger": {
+                      "Type": "ClickButtonTrigger"
+                    },
+                    "ButtonStyles": [
+                      {
+                        "Type": "IconButtonStyle",
+                        "IconReleased": "materialIcons\\48dp\\directions_car_FILL0_wght100_GRAD200_opsz48.png",
+                        "IconPressed": "materialIcons\\48dp\\directions_car_FILL0_wght100_GRAD200_opsz48.png"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "ButtonWithIcon",
+                    "Name": "buttonApps",
+                    "X": 150,
+                    "Width": 50,
+                    "Height": 50,
+                    "Pressed": "clickZone50px.png",
+                    "Released": "clickZone50px.png",
+                    "IconPressed": "materialIcons\\48dp\\apps_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconReleased": "materialIcons\\48dp\\memory_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconHeight": 48,
+                    "IconWidth": 48
+                  },
+                  {
+                    "Type": "ButtonWithIcon",
+                    "Name": "buttonNotifications",
+                    "X": 200,
+                    "Width": 50,
+                    "Height": 50,
+                    "Pressed": "clickZone50px.png",
+                    "Released": "clickZone50px.png",
+                    "IconPressed": "materialIcons\\48dp\\notifications_active_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconReleased": "materialIcons\\48dp\\notifications_active_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconX": 1,
+                    "IconY": 1,
+                    "IconHeight": 48,
+                    "IconWidth": 48
+                  },
+                  {
+                    "Type": "ButtonWithIcon",
+                    "Name": "buttonSettings",
+                    "X": 250,
+                    "Width": 50,
+                    "Height": 50,
+                    "Pressed": "clickZone50px.png",
+                    "Released": "clickZone50px.png",
+                    "IconPressed": "materialIcons\\48dp\\settings_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconReleased": "materialIcons\\48dp\\settings_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconX": 1,
+                    "IconY": 1,
+                    "IconHeight": 48,
+                    "IconWidth": 48
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "ListLayout",
+            "Name": "listNotification",
+            "X": 333,
+            "Width": 24,
+            "Height": 24,
+            "Direction": "East",
+            "Components": []
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonNotification",
+            "X": 300,
+            "Width": 180,
+            "Height": 75,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "X": -68,
+                "Y": 5,
+                "TextId": "__SingleUse_GMB0",
+                "TextRotation": "0",
+                "Wildcard1": {
+                  "TextId": "ResourceId1",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                },
+                "ColorReleased": {
+                  "Red": 255,
+                  "Green": 219,
+                  "Blue": 166
+                },
+                "ColorPressed": {
+                  "Green": 255
+                }
+              },
+              {
+                "Type": "IconButtonStyle",
+                "X": 10,
+                "IconReleased": "materialIcons\\24dp\\notifications_FILL0_wght100_GRAD200_opsz24.png",
+                "IconPressed": "materialIcons\\24dp\\notifications_FILL0_wght100_GRAD200_opsz24.png"
+              }
+            ]
+          },
+          {
+            "Type": "SlideMenu",
+            "Name": "slideDrop",
+            "Y": 197,
+            "Width": 480,
+            "Height": 75,
+            "FileNameBackground": "bcgroundslide48075.png",
+            "FileNameButtonPressed": "",
+            "FileNameButtonReleased": "",
+            "State": "Collapsed",
+            "ExpandDirection": "North",
+            "Easing": "Quint",
+            "EasingOption": "Out",
+            "AnimationDuration": 300,
+            "VisiblePixelsWhenCollapsed": 25,
+            "ExpandedStateTimeout": 32767,
+            "Components": [
+              {
+                "Type": "FlexButton",
+                "Name": "buttonDrop",
+                "X": 2,
+                "Y": -13,
+                "Width": 478,
+                "Height": 37,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "IconButtonStyle",
+                    "X": -4,
+                    "IconReleased": "materialIcons\\48dp\\expand_less_FILL0_wght100_GRAD200_opsz48.png",
+                    "IconPressed": "materialIcons\\48dp\\expand_less_FILL0_wght100_GRAD200_opsz48.png"
+                  }
+                ]
+              },
+              {
+                "Type": "ListLayout",
+                "Name": "listLights",
+                "Y": 25,
+                "Width": 50,
+                "Height": 50,
+                "Direction": "East",
+                "Components": []
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "transitionSettings",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonSettings"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "settingsScreen"
+            }
+          },
+          {
+            "InteractionName": "transitionCam",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonCamer"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "camScreen"
+            }
+          },
+          {
+            "InteractionName": "transitionLight",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonLights"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "lightsScreen"
+            }
+          },
+          {
+            "InteractionName": "transitionIdle",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonTurnOn"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionBlock",
+              "ActionComponent": "idleScreen"
+            }
+          },
+          {
+            "InteractionName": "transitionHardwareTest",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonApps"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "hardwareTestScreen"
+            }
+          },
+          {
+            "InteractionName": "animateBar",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonBar"
+            },
+            "Action": {
+              "Type": "ActionSetState",
+              "State": "Expanded",
+              "ActionComponent": "slideBar"
+            }
+          },
+          {
+            "InteractionName": "transitionTruck2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonTruckChange2"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "truckScreen"
+            }
+          },
+          {
+            "InteractionName": "animateGear",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonGearShow"
+            },
+            "Action": {
+              "Type": "ActionSetState",
+              "State": "Expanded",
+              "ActionComponent": "slideGear"
+            }
+          },
+          {
+            "InteractionName": "transitionNotification",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonNotification"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "notificationScreen"
+            }
+          },
+          {
+            "InteractionName": "animateDrop",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonDrop"
+            },
+            "Action": {
+              "Type": "ActionSetState",
+              "State": "Expanded",
+              "ActionComponent": "slideDrop"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "idleScreen",
+        "OverrideDefaultBufferSize": true,
+        "CanvasBufferSize": 1200,
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "buttonMain",
+            "Width": 480,
+            "Height": 272,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 216,
+                "Y": 96,
+                "IconReleased": "materialIcons\\48dp\\outline_touch_app_white_48dp.png",
+                "IconPressed": "materialIcons\\48dp\\outline_touch_app_white_48dp.png"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "transitionMain",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "mainScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "hardwareTestScreen",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "RelativeFilename": "bcground2.png"
+          },
+          {
+            "Type": "SwipeContainer",
+            "Name": "swipeContainer",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "SwipeCutoff": 50,
+            "ShowPageIndicator": true,
+            "PageIndicatorX": 222,
+            "PageIndicatorY": 255,
+            "CenteredX": true,
+            "IndicatorImageNormal": "__generated\\dark_theme_images_widgets_swipecontainer_small_off_normal.png",
+            "IndicatorImageHighlight": "__generated\\dark_theme_images_widgets_swipecontainer_small_on_dark.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "swipeContainerPage3",
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "swipeContainerPage2",
+                "Width": 480,
+                "Height": 272,
+                "Components": [
+                  {
+                    "Type": "Container",
+                    "Name": "containerJoy",
+                    "X": 350,
+                    "Y": 8,
+                    "Width": 120,
+                    "Height": 120,
+                    "Components": [
+                      {
+                        "Type": "TextArea",
+                        "Name": "textJoystick",
+                        "X": 41,
+                        "Y": 19,
+                        "Width": 39,
+                        "Height": 26,
+                        "TextId": "__SingleUse_OZ5V",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "AutoSize": true
+                      },
+                      {
+                        "Type": "BoxWithBorder",
+                        "Name": "boxBackground",
+                        "Width": 120,
+                        "Height": 120,
+                        "BorderColor": {
+                          "Red": 61,
+                          "Green": 59,
+                          "Blue": 59
+                        },
+                        "BorderSize": 5,
+                        "Alpha": 81
+                      },
+                      {
+                        "Type": "Line",
+                        "Name": "lineJoy1",
+                        "X": 10,
+                        "Y": 10,
+                        "Width": 100,
+                        "Height": 100,
+                        "Color": {
+                          "Red": 81,
+                          "Green": 255
+                        },
+                        "StartX": 50.0,
+                        "StartY": 50.0,
+                        "EndX": 30.0,
+                        "EndY": 70.0,
+                        "LineWidth": 3.0,
+                        "LineEndingStyle": "Square"
+                      },
+                      {
+                        "Type": "Line",
+                        "Name": "lineJoy2",
+                        "X": 10,
+                        "Y": 10,
+                        "Width": 100,
+                        "Height": 100,
+                        "Color": {
+                          "Red": 255
+                        },
+                        "StartX": 50.0,
+                        "StartY": 50.0,
+                        "EndX": 70.0,
+                        "EndY": 20.0,
+                        "LineWidth": 3.0,
+                        "LineEndingStyle": "Round"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listJoyTrigg",
+                    "X": 7,
+                    "Y": 150,
+                    "Width": 252,
+                    "Height": 100,
+                    "Direction": "East",
+                    "Components": [
+                      {
+                        "Type": "Container",
+                        "Name": "containerJoy1X",
+                        "Width": 42,
+                        "Height": 100,
+                        "Components": [
+                          {
+                            "Type": "LineProgress",
+                            "Name": "lineJoy1X",
+                            "Width": 5,
+                            "Height": 100,
+                            "Color": {
+                              "Green": 255
+                            },
+                            "StartX": 2.5,
+                            "StartY": 100.0,
+                            "EndX": 2.5,
+                            "LineWidth": 5.0,
+                            "LineEndingStyle": "Butt",
+                            "FileNameBackground": "temp5X100temp.png",
+                            "ProgressRangeMax": 100,
+                            "ProgressInitialValue": 20
+                          },
+                          {
+                            "Type": "TextArea",
+                            "Name": "textJoy1X",
+                            "X": 8,
+                            "Y": 44,
+                            "Width": 30,
+                            "Height": 13,
+                            "TextId": "__SingleUse_9FKX",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            },
+                            "AutoSize": true
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Container",
+                        "Name": "containerJoy1Y",
+                        "X": 42,
+                        "Width": 42,
+                        "Height": 100,
+                        "Components": [
+                          {
+                            "Type": "LineProgress",
+                            "Name": "lineJoy1Y",
+                            "Width": 5,
+                            "Height": 100,
+                            "Color": {
+                              "Green": 255
+                            },
+                            "StartX": 2.5,
+                            "StartY": 100.0,
+                            "EndX": 2.5,
+                            "LineWidth": 5.0,
+                            "LineEndingStyle": "Butt",
+                            "FileNameBackground": "temp5X100temp.png",
+                            "ProgressRangeMax": 100,
+                            "ProgressInitialValue": 50
+                          },
+                          {
+                            "Type": "TextArea",
+                            "Name": "textJoy1Y",
+                            "X": 8,
+                            "Y": 44,
+                            "Width": 29,
+                            "Height": 13,
+                            "TextId": "__SingleUse_GSL4",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            },
+                            "AutoSize": true
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Container",
+                        "Name": "containerJoy2X",
+                        "X": 84,
+                        "Width": 42,
+                        "Height": 100,
+                        "Components": [
+                          {
+                            "Type": "LineProgress",
+                            "Name": "lineJoy2X",
+                            "Width": 5,
+                            "Height": 100,
+                            "Color": {
+                              "Red": 255
+                            },
+                            "StartX": 2.5,
+                            "StartY": 100.0,
+                            "EndX": 2.5,
+                            "LineWidth": 5.0,
+                            "LineEndingStyle": "Butt",
+                            "FileNameBackground": "temp5X100temp.png",
+                            "ProgressRangeMax": 100,
+                            "ProgressInitialValue": 69
+                          },
+                          {
+                            "Type": "TextArea",
+                            "Name": "textJoy2X",
+                            "X": 8,
+                            "Y": 44,
+                            "Width": 30,
+                            "Height": 13,
+                            "TextId": "__SingleUse_CU7A",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            },
+                            "AutoSize": true
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Container",
+                        "Name": "containerJoy2Y",
+                        "X": 126,
+                        "Width": 42,
+                        "Height": 100,
+                        "Components": [
+                          {
+                            "Type": "LineProgress",
+                            "Name": "lineJoy2Y",
+                            "Width": 5,
+                            "Height": 100,
+                            "Color": {
+                              "Red": 255
+                            },
+                            "StartX": 2.5,
+                            "StartY": 100.0,
+                            "EndX": 2.5,
+                            "LineWidth": 5.0,
+                            "LineEndingStyle": "Butt",
+                            "FileNameBackground": "temp5X100temp.png",
+                            "ProgressRangeMax": 100,
+                            "ProgressInitialValue": 45
+                          },
+                          {
+                            "Type": "TextArea",
+                            "Name": "textJoy2Y",
+                            "X": 8,
+                            "Y": 44,
+                            "Width": 29,
+                            "Height": 13,
+                            "TextId": "__SingleUse_K276",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            },
+                            "AutoSize": true
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Container",
+                        "Name": "containerTriggL",
+                        "X": 168,
+                        "Width": 42,
+                        "Height": 100,
+                        "Components": [
+                          {
+                            "Type": "LineProgress",
+                            "Name": "lineTriggL",
+                            "Width": 5,
+                            "Height": 100,
+                            "Color": {
+                              "Red": 255,
+                              "Green": 127
+                            },
+                            "StartX": 2.5,
+                            "StartY": 100.0,
+                            "EndX": 2.5,
+                            "LineWidth": 5.0,
+                            "LineEndingStyle": "Butt",
+                            "FileNameBackground": "temp5X100temp.png",
+                            "ProgressRangeMax": 100,
+                            "ProgressInitialValue": 10
+                          },
+                          {
+                            "Type": "TextArea",
+                            "Name": "textTriggL",
+                            "X": 8,
+                            "Y": 44,
+                            "Width": 24,
+                            "Height": 13,
+                            "TextId": "__SingleUse_Y7MG",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            },
+                            "AutoSize": true
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Container",
+                        "Name": "containerTriggR",
+                        "X": 210,
+                        "Width": 42,
+                        "Height": 100,
+                        "Components": [
+                          {
+                            "Type": "LineProgress",
+                            "Name": "lineTriggR",
+                            "Width": 5,
+                            "Height": 100,
+                            "Color": {
+                              "Red": 255,
+                              "Green": 127
+                            },
+                            "StartX": 2.5,
+                            "StartY": 100.0,
+                            "EndX": 2.5,
+                            "LineWidth": 5.0,
+                            "LineEndingStyle": "Butt",
+                            "FileNameBackground": "temp5X100temp.png",
+                            "ProgressRangeMax": 100,
+                            "ProgressInitialValue": 30
+                          },
+                          {
+                            "Type": "TextArea",
+                            "Name": "textTriggR",
+                            "X": 8,
+                            "Y": 44,
+                            "Width": 26,
+                            "Height": 13,
+                            "TextId": "__SingleUse_NHWX",
+                            "TextRotation": "0",
+                            "Color": {
+                              "Red": 255,
+                              "Green": 255,
+                              "Blue": 255
+                            },
+                            "AutoSize": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listLayoutButton",
+                    "X": 71,
+                    "Y": 21,
+                    "Width": 144,
+                    "Height": 24,
+                    "Direction": "East",
+                    "Components": [
+                      {
+                        "Type": "Image",
+                        "Name": "imageBttn1",
+                        "Width": 24,
+                        "Height": 24,
+                        "RelativeFilename": "materialIcons\\24dp\\radio_button_unchecked_FILL0_wght100_GRAD200_opsz24.png"
+                      },
+                      {
+                        "Type": "Image",
+                        "Name": "imageBttn2",
+                        "X": 24,
+                        "Width": 24,
+                        "Height": 24,
+                        "RelativeFilename": "materialIcons\\24dp\\radio_button_unchecked_FILL0_wght100_GRAD200_opsz24.png"
+                      },
+                      {
+                        "Type": "Image",
+                        "Name": "imageBttn3",
+                        "X": 48,
+                        "Width": 24,
+                        "Height": 24,
+                        "RelativeFilename": "materialIcons\\24dp\\radio_button_unchecked_FILL0_wght100_GRAD200_opsz24.png"
+                      },
+                      {
+                        "Type": "Image",
+                        "Name": "imageBttn4",
+                        "X": 72,
+                        "Width": 24,
+                        "Height": 24,
+                        "RelativeFilename": "materialIcons\\24dp\\radio_button_unchecked_FILL0_wght100_GRAD200_opsz24.png"
+                      },
+                      {
+                        "Type": "Image",
+                        "Name": "imageBttn5",
+                        "X": 96,
+                        "Width": 24,
+                        "Height": 24,
+                        "RelativeFilename": "materialIcons\\24dp\\radio_button_unchecked_FILL0_wght100_GRAD200_opsz24.png"
+                      },
+                      {
+                        "Type": "Image",
+                        "Name": "imageBttn6",
+                        "X": 120,
+                        "Width": 24,
+                        "Height": 24,
+                        "RelativeFilename": "materialIcons\\24dp\\radio_button_unchecked_FILL0_wght100_GRAD200_opsz24.png"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "containerGyro",
+                    "X": 350,
+                    "Y": 128,
+                    "Width": 120,
+                    "Height": 120,
+                    "Components": [
+                      {
+                        "Type": "BoxWithBorder",
+                        "Name": "boxBackgroundGyro",
+                        "Width": 120,
+                        "Height": 120,
+                        "BorderColor": {
+                          "Red": 61,
+                          "Green": 59,
+                          "Blue": 59
+                        },
+                        "BorderSize": 5,
+                        "Alpha": 81
+                      },
+                      {
+                        "Type": "TextureMapper",
+                        "Name": "textureMapper1",
+                        "X": 10,
+                        "Y": 10,
+                        "Width": 100,
+                        "Height": 100,
+                        "UseAnimation": true,
+                        "RenderingAlgorithm": "Nearest-neighbor",
+                        "FileNameImage": "joyImg.png",
+                        "LockBitmapToCenter": true,
+                        "XBitmapPosition": 25.0,
+                        "YBitmapPosition": 25.0,
+                        "XAngle": 0.1,
+                        "YAngle": 0.1,
+                        "ZAngle": 0.1,
+                        "Scale": 1.5,
+                        "LockOrigoToCenter": true,
+                        "XOrigo": 50.0,
+                        "YOrigo": 50.0,
+                        "ZOrigo": 50.0,
+                        "CameraDistance": 50.0
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "containerCurve",
+                    "X": 230,
+                    "Y": 8,
+                    "Width": 120,
+                    "Height": 120,
+                    "Components": [
+                      {
+                        "Type": "BoxWithBorder",
+                        "Name": "boxBackgroundAxis",
+                        "Width": 120,
+                        "Height": 120,
+                        "BorderColor": {
+                          "Red": 61,
+                          "Green": 59,
+                          "Blue": 59
+                        },
+                        "BorderSize": 5,
+                        "Alpha": 81
+                      },
+                      {
+                        "Type": "Line",
+                        "Name": "lineAxisX",
+                        "Width": 120,
+                        "Height": 120,
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Alpha": 54,
+                        "StartX": 5.0,
+                        "StartY": 60.0,
+                        "EndX": 115.0,
+                        "EndY": 60.0,
+                        "LineWidth": 1.0,
+                        "LineEndingStyle": "Round"
+                      },
+                      {
+                        "Type": "Line",
+                        "Name": "lineAxisY",
+                        "Width": 120,
+                        "Height": 120,
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Alpha": 54,
+                        "StartX": 60.0,
+                        "StartY": 5.0,
+                        "EndX": 60.0,
+                        "EndY": 115.0,
+                        "LineWidth": 1.0,
+                        "LineEndingStyle": "Round"
+                      },
+                      {
+                        "Type": "Circle",
+                        "Name": "circleAxis",
+                        "X": 45,
+                        "Y": 45,
+                        "Width": 30,
+                        "Height": 30,
+                        "Color": {
+                          "Green": 255
+                        },
+                        "CenterX": 15.0,
+                        "CenterY": 15.0,
+                        "Radius": 2.0,
+                        "EndAngle": 360.0,
+                        "CapPrecision": "Butt"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainerPage1",
+                "Width": 480,
+                "Height": 272,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea1",
+                    "X": 9,
+                    "Y": 58,
+                    "Width": 461,
+                    "Height": 202,
+                    "TextId": "__SingleUse_XFFL",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_P3Z3",
+                      "UseBuffer": true,
+                      "BufferSize": 257
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textTitleUART",
+                    "X": 125,
+                    "Y": 26,
+                    "Width": 231,
+                    "Height": 25,
+                    "TextId": "__SingleUse_02V0",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainerPage3",
+                "Width": 480,
+                "Height": 272,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "textAreaIOM",
+                    "X": 71,
+                    "Y": 20,
+                    "Width": 237,
+                    "Height": 25,
+                    "TextId": "__SingleUse_MEP3",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "AutoSize": true
+                  },
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listIOMNames",
+                    "X": 189,
+                    "Y": 62,
+                    "Width": 105,
+                    "Height": 26,
+                    "Direction": "South",
+                    "Components": [
+                      {
+                        "Type": "TextArea",
+                        "Name": "textNameTrailer",
+                        "Width": 105,
+                        "Height": 13,
+                        "TextId": "__SingleUse_X6HY",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_D2RI",
+                          "UseBuffer": true,
+                          "BufferSize": 15
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textName",
+                        "Y": 13,
+                        "Width": 105,
+                        "Height": 13,
+                        "TextId": "__SingleUse_XO2P",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_0AWB",
+                          "UseBuffer": true,
+                          "BufferSize": 15
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listIOMBool",
+                    "X": 11,
+                    "Y": 64,
+                    "Width": 92,
+                    "Height": 195,
+                    "Direction": "South",
+                    "Components": [
+                      {
+                        "Type": "TextArea",
+                        "Name": "textTruckType",
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_33NR",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_9NUO",
+                          "UseBuffer": true,
+                          "BufferSize": 7
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textTop",
+                        "Y": 15,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_ZPQD",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_QHBN",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textHigh",
+                        "Y": 30,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_Z6LO",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_QF7Q",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textLow",
+                        "Y": 45,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_XXIK",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_NTBH",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textPos",
+                        "Y": 60,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_JG7H",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_91AY",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textHazards",
+                        "Y": 75,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_JB6M",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_X7GZ",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textLeftBlinker",
+                        "Y": 90,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_2YRQ",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_2ANU",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textRightBlinker",
+                        "Y": 105,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_S9Q3",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_819K",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textFogF",
+                        "Y": 120,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_2GH3",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_QMO7",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textFogR",
+                        "Y": 135,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_5WEO",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_JU3Z",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textGearUp",
+                        "Y": 150,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_QTSZ",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_CUOI",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textGearDown",
+                        "Y": 165,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_2MZA",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_LG0S",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textHorn",
+                        "Y": 180,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_CWUR",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_ZNJP",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "ListLayout",
+                    "Name": "listIOMInt",
+                    "X": 103,
+                    "Y": 64,
+                    "Width": 92,
+                    "Height": 60,
+                    "Direction": "South",
+                    "Components": [
+                      {
+                        "Type": "TextArea",
+                        "Name": "textGear",
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_G0MO",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_IJHH",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textSpeed",
+                        "Y": 15,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_19AD",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_XOVY",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textRPM",
+                        "Y": 30,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_5WMW",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_9LAD",
+                          "UseBuffer": true,
+                          "BufferSize": 2
+                        }
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textAdress",
+                        "Y": 45,
+                        "Width": 92,
+                        "Height": 15,
+                        "TextId": "__SingleUse_25NR",
+                        "TextRotation": "0",
+                        "Color": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "Wildcard1": {
+                          "TextId": "__SingleUse_PXKW",
+                          "UseBuffer": true,
+                          "BufferSize": 4
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "FlexButton",
+                    "Name": "buttonResetController",
+                    "X": 400,
+                    "Y": 195,
+                    "Width": 60,
+                    "Height": 60,
+                    "ButtonTrigger": {
+                      "Type": "ClickButtonTrigger"
+                    },
+                    "ButtonStyles": [
+                      {
+                        "Type": "TextButtonStyle",
+                        "Y": 45,
+                        "TextId": "__SingleUse_VYH6",
+                        "TextRotation": "0",
+                        "ColorReleased": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        },
+                        "ColorPressed": {
+                          "Red": 255,
+                          "Green": 255,
+                          "Blue": 255
+                        }
+                      },
+                      {
+                        "Type": "IconButtonStyle",
+                        "X": 6,
+                        "IconReleased": "materialIcons\\48dp\\restart_alt_FILL0_wght100_GRAD200_opsz48.png",
+                        "IconPressed": "materialIcons\\48dp\\restart_alt_FILL0_wght100_GRAD200_opsz48.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "buttonMain",
+            "X": 7,
+            "Y": 7,
+            "Width": 50,
+            "Height": 50,
+            "LockPosition": true,
+            "Pressed": "clickZone50px.png",
+            "Released": "clickZone50px.png",
+            "IconPressed": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconReleased": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconHeight": 48,
+            "IconWidth": 48
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "transitionMain",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "mainScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "truckScreen",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "imageBackground",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "RelativeFilename": "bcground2.png"
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "buttonMain",
+            "X": 7,
+            "Y": 7,
+            "Width": 50,
+            "Height": 50,
+            "LockPosition": true,
+            "Pressed": "clickZone50px.png",
+            "Released": "clickZone50px.png",
+            "IconPressed": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconReleased": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconHeight": 48,
+            "IconWidth": 48
+          },
+          {
+            "Type": "ScrollableContainer",
+            "Name": "scrollableActive",
+            "X": 90,
+            "Y": 57,
+            "Width": 308,
+            "Height": 168,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": true,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "ScrollbarsAlpha": 155,
+            "Components": [
+              {
+                "Type": "ListLayout",
+                "Name": "listActive",
+                "Width": 300,
+                "Height": 50,
+                "Direction": "South",
+                "Components": []
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 55,
+            "Y": 32,
+            "Width": 371,
+            "Height": 25,
+            "TextId": "__SingleUse_MEGC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "mainScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "notificationScreen",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "RelativeFilename": "bcground2.png"
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "buttonMain",
+            "X": 7,
+            "Y": 7,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "clickZone50px.png",
+            "Released": "clickZone50px.png",
+            "IconPressed": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconReleased": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+            "IconHeight": 48,
+            "IconWidth": 48
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "buttonSettings",
+            "X": 7,
+            "Y": 57,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "clickZone50px.png",
+            "Released": "clickZone50px.png",
+            "IconPressed": "materialIcons\\48dp\\settings_FILL0_wght100_GRAD200_opsz48.png",
+            "IconReleased": "materialIcons\\48dp\\settings_FILL0_wght100_GRAD200_opsz48.png",
+            "IconX": 1,
+            "IconY": 1,
+            "IconHeight": 48,
+            "IconWidth": 48
+          },
+          {
+            "Type": "ScrollableContainer",
+            "Name": "scrollableNotification",
+            "X": 64,
+            "Y": 14,
+            "Width": 416,
+            "Height": 242,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": true,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "ScrollbarsAlpha": 155,
+            "Components": [
+              {
+                "Type": "ListLayout",
+                "Name": "listNotification",
+                "Width": 410,
+                "Height": 70,
+                "Direction": "South",
+                "Components": []
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "containerAmount",
+            "Y": 212,
+            "Width": 64,
+            "Height": 58,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "image1",
+                "X": 8,
+                "Y": 10,
+                "Width": 48,
+                "Height": 48,
+                "RelativeFilename": "materialIcons\\48dp\\settings_FILL0_wght100_GRAD200_opsz48_1.png"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textAmountTitle",
+                "Width": 64,
+                "Height": 20,
+                "TextId": "__SingleUse_9K37",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textAmount",
+                "X": 21,
+                "Y": 27,
+                "Width": 22,
+                "Height": 15,
+                "TextId": "__SingleUse_62UB",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "UseBuffer": true,
+                  "BufferSize": 11
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "transitionMain",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "mainScreen"
+            }
+          },
+          {
+            "InteractionName": "transitionSettings",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonSettings"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "settingsScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "authorScreen",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "background",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "RelativeFilename": "bcground2.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonMain",
+            "X": 7,
+            "Y": 7,
+            "Width": 50,
+            "Height": 50,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "IconReleased": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png",
+                "IconPressed": "materialIcons\\48dp\\home_FILL0_wght100_GRAD200_opsz48.png"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 403,
+            "Y": 259,
+            "Width": 77,
+            "Height": 13,
+            "TextId": "wUztruck2023",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAuthors",
+            "X": 204,
+            "Y": 13,
+            "Width": 94,
+            "Height": 25,
+            "TextId": "authors",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textKadzejoo",
+            "X": 204,
+            "Y": 38,
+            "Width": 159,
+            "Height": 26,
+            "TextId": "kadzejoo",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "transitionMain",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonMain"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "mainScreen"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "containerButtonConnect",
+        "Width": 300,
+        "Height": 50,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "imageSelected",
+            "Width": 300,
+            "Height": 50,
+            "RelativeFilename": "a300x50_frame_white.png"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "Width": 300,
+            "Height": 50,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 20,
+            "StartX": 9.0,
+            "StartY": 45.4,
+            "EndX": 290.0,
+            "EndY": 45.4,
+            "LineWidth": 3.0,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Image",
+            "Name": "imageStatusConnection",
+            "X": 93,
+            "Y": 13,
+            "Width": 24,
+            "Height": 24,
+            "RelativeFilename": "materialIcons\\24dp\\outline_wifi_white_24dp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textName",
+            "X": 124,
+            "Y": 18,
+            "Width": 144,
+            "Height": 15,
+            "TextId": "__SingleUse_AJ44",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 30
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "imageBatteryState",
+            "X": 69,
+            "Y": 13,
+            "Width": 24,
+            "Height": 24,
+            "RelativeFilename": "materialIcons\\24dp\\outline_battery_alert_white_24dp.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "imageStatus",
+            "X": 269,
+            "Y": 13,
+            "Width": 24,
+            "Height": 24,
+            "RelativeFilename": "materialIcons\\24dp\\joystick_FILL0_wght100_GRAD200_opsz24.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "buttonIcon",
+            "X": 10,
+            "Width": 50,
+            "Height": 50,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "IconReleased": "materialIcons\\48dp\\local_shipping_FILL0_wght100_GRAD200_opsz48.png",
+                "IconPressed": "materialIcons\\48dp\\local_shipping_FILL0_wght100_GRAD200_opsz48.png"
+              }
+            ]
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "notificationContainer",
+        "Width": 410,
+        "Height": 70,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "iconType24dp",
+            "Width": 24,
+            "Height": 24,
+            "Visible": false,
+            "RelativeFilename": "materialIcons\\24dp\\cancel_FILL0_wght100_GRAD200_opsz24.png"
+          },
+          {
+            "Type": "Container",
+            "Name": "containerBig",
+            "Width": 410,
+            "Height": 70,
+            "Components": [
+              {
+                "Type": "Shape",
+                "Name": "shapePriority",
+                "Width": 70,
+                "Height": 70,
+                "Color": {
+                  "Red": 161,
+                  "Green": 22,
+                  "Blue": 154
+                },
+                "Points": [
+                  {
+                    "X": 40.0,
+                    "Y": 70.0
+                  },
+                  {
+                    "Y": 50.0
+                  },
+                  {
+                    "Y": 10.0
+                  }
+                ],
+                "XScale": 1.0,
+                "YScale": 1.0,
+                "XOrigin": 6.0
+              },
+              {
+                "Type": "Line",
+                "Name": "lineDeco",
+                "X": 68,
+                "Y": 23,
+                "Width": 342,
+                "Height": 15,
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Alpha": 81,
+                "StartX": 2.0,
+                "StartY": 5.0,
+                "EndX": 335.0,
+                "EndY": 5.0,
+                "LineWidth": 2.0,
+                "LineEndingStyle": "Round"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "textTitle",
+                "X": 68,
+                "Y": 5,
+                "Width": 342,
+                "Height": 24,
+                "TextId": "__SingleUse_Z52N",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "UseBuffer": true,
+                  "BufferSize": 35
+                }
+              },
+              {
+                "Type": "Image",
+                "Name": "iconType",
+                "X": 10,
+                "Y": 11,
+                "Width": 48,
+                "Height": 48,
+                "RelativeFilename": "materialIcons\\48dp\\donut_large_FILL0_wght100_GRAD200_opsz48.png"
+              },
+              {
+                "Type": "Container",
+                "Name": "containerBarDisplay",
+                "X": 68,
+                "Y": 30,
+                "Width": 342,
+                "Height": 35,
+                "Visible": false,
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "boxBcgrnd",
+                    "X": 3,
+                    "Y": 8,
+                    "Width": 254,
+                    "Height": 14,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Alpha": 81
+                  },
+                  {
+                    "Type": "BoxProgress",
+                    "Name": "barDisplay",
+                    "X": 6,
+                    "Y": 10,
+                    "Width": 300,
+                    "Height": 50,
+                    "Color": {
+                      "Green": 255,
+                      "Blue": 13
+                    },
+                    "Direction": "Right",
+                    "FileNameBackground": "a300x50_frame_blank.png",
+                    "IndicatorPositionWidth": 250,
+                    "IndicatorPositionHeight": 10,
+                    "ProgressRangeMax": 100,
+                    "ProgressInitialValue": 100
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textPercentage",
+                    "X": 272,
+                    "Y": 3,
+                    "Width": 56,
+                    "Height": 26,
+                    "TextId": "__SingleUse_T9B8",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Wildcard1": {
+                      "UseBuffer": true,
+                      "BufferSize": 10
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "containerSubText",
+                "X": 68,
+                "Y": 36,
+                "Width": 342,
+                "Height": 34,
+                "Visible": false,
+                "Components": [
+                  {
+                    "Type": "TextArea",
+                    "Name": "subText2",
+                    "Y": 14,
+                    "Width": 342,
+                    "Height": 15,
+                    "TextId": "__SingleUse_GIU1",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Wildcard1": {
+                      "UseBuffer": true,
+                      "BufferSize": 60
+                    }
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "subText1",
+                    "Y": -1,
+                    "Width": 342,
+                    "Height": 15,
+                    "TextId": "__SingleUse_MBNE",
+                    "TextRotation": "0",
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    },
+                    "Wildcard1": {
+                      "UseBuffer": true,
+                      "BufferSize": 60
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "Name": "MyApplication",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 24,
+    "StartupScreenName": "startupScreen",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      24
+    ],
+    "AvailableLCDs": {
+      "24": "LCD24bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD24bpp": {
+        "Id": "LCD24bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32H7",
+    "SubFamily": "STM32H725/735",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../STM32H735G-DK.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "Vector"
+    ]
+  },
+  "Version": "4.21.3",
+  "CreatedBy": "4.21.3"
+}

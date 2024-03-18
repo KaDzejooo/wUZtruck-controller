@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.22.0">
+  <Languages>
+    <Language Id="GB" />
+    <Language Id="PL" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group2">
+      <Text Id="placeholder" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;placeholder&gt;</Translation>
+        <Translation Language="PL">&lt;placeholder&gt;</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="lights">
+      <Text Id="trailerconnect" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Trailer</Translation>
+        <Translation Language="PL">Naczepa</Translation>
+      </Text>
+      <Text Id="axlelifting" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Axle</Translation>
+        <Translation Language="PL">Os</Translation>
+      </Text>
+      <Text Id="foglightsrear" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Fog</Translation>
+        <Translation Language="PL">Mgła</Translation>
+      </Text>
+      <Text Id="foglightsfront" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Fog</Translation>
+        <Translation Language="PL">Mgła</Translation>
+      </Text>
+      <Text Id="poslights" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Pos</Translation>
+        <Translation Language="PL">Poz</Translation>
+      </Text>
+      <Text Id="toplights" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Top</Translation>
+        <Translation Language="PL">Owiewka</Translation>
+      </Text>
+      <Text Id="HighBeams" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">High</Translation>
+        <Translation Language="PL">Długie</Translation>
+      </Text>
+      <Text Id="LowBeams" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Low</Translation>
+        <Translation Language="PL">Krotkie</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Group1">
+      <Text Id="truckScaniaB" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Scania Black</Translation>
+        <Translation Language="PL">Scania Black</Translation>
+      </Text>
+      <Text Id="truckScania" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB"></Translation>
+        <Translation Language="PL">Scania</Translation>
+      </Text>
+      <Text Id="truckMan" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">MAN</Translation>
+        <Translation Language="PL">MAN</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_6GY7" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Accept</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_X55S" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">sysconnect xbee</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_LA6G" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">sudo system-config</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_7Y8W" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Top value cutout</Translation>
+        <Translation Language="PL">Limit prędkosci</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZJY7" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Joystick Map</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_VYVI" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">New Text:&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_PW7E" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">New Text:&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3O3G" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">CamY: &lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_BVV4" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">CamX: &lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_GBGX" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">New Text</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_XNZQ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Inverted</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_FIUJ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Drive</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_M8LY" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;:&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_XLOZ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Empty</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_QNYA" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Clear</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_FQN6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Default</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_J3KV" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Accept</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_C580" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Invert selected axis</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_TC6X" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">cd /home/desktop/mainScreen</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_I7X7" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Turn:&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JQ8K" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Speed:&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JBNZ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Actual setup:</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_K78I" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Drive</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_8119" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Trigg : &lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_T6Y8" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">CamY</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_4659" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Joy2y : &lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_6IJD" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">CamX</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_YPPJ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Joy2x : &lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_KFML" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Turn</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_4M7V" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Joy1y : &lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_WAUI" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Drive</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_LO9K" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Joy1x : &lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_POMB" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Select :</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_LBUD" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Camera vertical</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_P9A7" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Camera horizontal</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y6GI" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Turning direction</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_AGAH" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Driving speed</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_DQY4" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Joystick Trigger</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_J0EO" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Joystick 2 x</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_N17U" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Joystick 2 y</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_JMGF" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Joystick 1 y</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_6QBO" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Joystick 1 x</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_JXGO" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Joystick axis</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_BKSB" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Set connection Status (debug only)</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_MSSM" Alignment="Center" TypographyId="Typo_inter_10px">
+        <Translation Language="GB">// Outputs disabled //&#10;connect to vehicle</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_DY6X" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Select vehicle type (debug only)</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_N5UH" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Truck recieved data</Translation>
+        <Translation Language="PL">IOM Data</Translation>
+      </Text>
+      <Text Id="__SingleUse_WRNS" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">TruckName: "&lt;value&gt;"</Translation>
+        <Translation Language="PL">NazwaCiężar &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_HAL2" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">TrailerName: "&lt;value&gt;"</Translation>
+        <Translation Language="PL">Naczepa  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_94EH" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Horn &lt;value&gt;</Translation>
+        <Translation Language="PL">Horn &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_HXSP" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Gear Down &lt;value&gt;</Translation>
+        <Translation Language="PL">Gear Down &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_P518" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Gear Up &lt;value&gt;</Translation>
+        <Translation Language="PL">Gear Up &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_BHYI" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Fog R &lt;value&gt;</Translation>
+        <Translation Language="PL">Fog R &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_FQII" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Fog F &lt;value&gt;</Translation>
+        <Translation Language="PL">Fog F &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_BVMH" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">RightBlinker &lt;value&gt;</Translation>
+        <Translation Language="PL">RightBlinker &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_1I3P" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">LeftBlinker  &lt;value&gt;</Translation>
+        <Translation Language="PL">LeftBlinker  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3X7O" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Hazards  &lt;value&gt;</Translation>
+        <Translation Language="PL">Hazards  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AY79" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Pos  &lt;value&gt;</Translation>
+        <Translation Language="PL">Pos  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_60ZG" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">LowBeams  &lt;value&gt;</Translation>
+        <Translation Language="PL">LowBeams  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4CX8" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">HighBeams  &lt;value&gt;</Translation>
+        <Translation Language="PL">HighBeams  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3LJW" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">TopLights  &lt;value&gt;</Translation>
+        <Translation Language="PL">TopLights  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_MIRZ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Truck type  &lt;value&gt;</Translation>
+        <Translation Language="PL">Truck type  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JP5I" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Adress &lt;value&gt;</Translation>
+        <Translation Language="PL">Adres &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_5FRT" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">RPM &lt;value&gt;</Translation>
+        <Translation Language="PL">RPM &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_NAED" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Speed &lt;value&gt;</Translation>
+        <Translation Language="PL">Speed &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_T2TU" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Gear &lt;value&gt;</Translation>
+        <Translation Language="PL">Gear &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AG0F" Alignment="Left" TypographyId="Typo_inter_10px">
+        <Translation Language="GB">/// nullExcpt</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_6KNL" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_KIPC" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">R2</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_IZSO" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">KN wUZtruck 2023/2024</Translation>
+        <Translation Language="PL">KaDzejoo - Szymon Podlak - &#10;Lead Programmer / UI designer</Translation>
+      </Text>
+      <Text Id="__SingleUse_HGN4" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">And the support from University&#10;of Zielona Gora</Translation>
+        <Translation Language="PL">KaDzejoo - Szymon Podlak - &#10;Lead Programmer / UI designer</Translation>
+      </Text>
+      <Text Id="__SingleUse_MKKP" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">With honest help of&#10;Krystian Gajewski</Translation>
+        <Translation Language="PL">KaDzejoo - Szymon Podlak - &#10;Lead Programmer / UI designer</Translation>
+      </Text>
+      <Text Id="__SingleUse_GPLH" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">also here </Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_TF1Y" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">also here </Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_I7KN" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_SILF" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">add text here "in code"xd</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_B6XU" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_TNZ1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">255</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y0CR" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_57RO" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">also here </Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_QU0H" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_04GN" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">add text here "in code"xd</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_NC38" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_O4I5" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">255</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_E3K5" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_1SI4" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">also here </Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_OW1A" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_P4UX" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">add text here "in code"xd</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_QVV3" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_SCEJ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">255</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_79H6" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_15R8" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">also here </Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_L00R" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_257L" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">add text here "in code"xd</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_6LN2" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_KN84" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">255</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_HGVF" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_J8RO" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">also here </Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_P2G1" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_MC9V" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">add text here "in code"xd</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_31NF" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2WOI" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">255</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_462E" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_LW9H" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">also here </Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_5OG9" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_IB68" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">add text here "in code"xd</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_XC9O" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_KE05" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">255</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZQ0O" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y34X" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Line div text demoo</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_0UU1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_INRV" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">set this text in code bruh</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_JJQ5" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_F265" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">turns on top lights on top light on vehicle yaaay</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_D7ET" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Top lights button is gay</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_MLLW" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_05WD" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_LK3F" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Screens</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_DF1I" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Main Screen</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_WMC4" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Main Screen</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_W91Y" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Demo</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_FSOO" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Settings</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_ODTQ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Notifications</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_07XQ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Hardware&#10;test</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_H3A8" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Vehicle&#10;selection</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_UC28" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Functions&#10;screen</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_4BG0" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Turns off&#10;controller</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_9IHF" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Gearbox&#10;controll&#10;button</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZWGD" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Dropdown menu for &#10;accessing other screens</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_BYC2" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Notifications</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_EUTH" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Dropdown menu that allolws quick acces into vehicle&#10;functions</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_N9HK" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Help button</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_8QQQ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Select functions from the screen to use them</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_9Z58" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">11</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_J08C" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Click "Accept" button to apply changes</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_DD40" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0x21</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_0JC6" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Adress:&#10;&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_7UNQ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">short description of vehicle or smthng</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_PB32" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_SC4O" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0x21</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_C5N4" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_7DIC" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Blue scania</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_P7WF" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_XKRV" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Turn off all</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_25B2" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Hazards</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_8DTT" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Main screen</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_KUW1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Stop all motors</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_9DMZ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_TKEK" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_8L9W" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2WMZ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_9CQJ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Top lights on</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_VPJW" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Turns top lights on/off witch toggle button</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_BNAC" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_DHBW" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_BE0T" Alignment="Left" TypographyId="typoNumber">
+        <Translation Language="GB">21</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_NA9O" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">3</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_YA6Y" Alignment="Center" TypographyId="typoNumber">
+        <Translation Language="GB">D&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_MS2W" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">87</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_6A3S" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_WKQY" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_01DK" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">set this text in code bruh</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_2FQQ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_QIIM" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_L3IK" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">add text here "in code"xd</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_RIQY" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">255</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_LY03" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_9ULO" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_76O4" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">wUztruck controllerApp 2024&#10;MCU: STM32H735G-DK&#10;Compilation ver. v0.53 &#10;Last update: &#10;    05.03.2024&#10;    00:54 CET&#10;&#10;MPU:&#10;    Cortex-M7NS&#10;Internal memory:&#10;    Flash: 1 Mb&#10;    SRAM: 564 Kb &#10;External memory:&#10;    OctoSPI: 512 Mb&#10;    HyperRAM: 128 Mb&#10;Screen:&#10;    4.3"TFT 480×272 LCD Capacitive touch panel &#10;RTOS:&#10;    CMSIS_V2&#10;    10.3.1&#10;Starting system...&#10; &#10;Starting RTOS kernel &#10;Checking kernel status...&#10;MAX_HEAP_SIZE = 15360Kb&#10;&#10;WARNING: CMSIS_V2 module "Timer" not configured &#10;WARNING: CMSIS_V2 module "Mutex" not configured&#10;Kernel OK&#10;═════════&#10;&#10;Binding tasks to kernel&#10;╔═══════════════════════════════╗&#10;-&gt; TouchGFXTask     &#10;        StackSize: 1600 (words) &#10;        @osPriorityRealtime     &#10;-&gt; intergitymngrtask           &#10;        StackSize: 512 (words)  &#10;        @osPriorityRealtime     &#10;-&gt; taskIo                      &#10;        StackSize: 512 (words)  &#10;        @osPriorityNormal       &#10;-&gt; videotask                   &#10;        StackSize: 128 (words)  &#10;        @osPriorityLow          &#10;-&gt; uarttask                    &#10;        StackSize: 128 (words)  &#10;        @osPriorityLow&#10;      &#10;                Total 5760&#10;                 /15360000 bytes &#10;╚═══════════════════════════════╝&#10;Tasks created succesfully &#10;&#10;&#10;Checking hardware...&#10;Power management OK&#10;Auto configuring devices...&#10;    Joy             OK&#10;    Button          OK&#10;    UARTconnector   OK&#10; &#10;WARNING: ModLoaderOX unable to configure ADXL445 module&#10;WARNING: ModLoaderOX unable to configure SDcardReader module&#10;WARNING: ModLoaderOX unable to configure R304SCapacitiveFingerprintSensor&#10;&#10;Connecting via UART:&#10;Found: &#10;    =&gt; XB24-AUI-001 - ZigBee module&#10; &#10;Startng Accounts Service&#10;Openning user sesion&#10;UserId:&#10;    e762f4367d06bb44&#10;    ---------------- &#10; &#10;Checking for updates...&#10;None, there is no shit-&#10;like on windows&#10;&#10;Starting theme manager &#10;Generating backgrounds and themes&#10;OK&#10;&#10;Generated:&#10;════════════════════════════════════════════════════════════&#10;Name                CtrID       Dim         Compr       DevID&#10;popeMode            2137        480*272     LZW9        0&#10;debugMode           66          480*272     LZW9        1&#10;defaultMode         441         480*272     LZW9        2&#10;════════════════════════════════════════════════════════════&#10;&#10;Loading keymap...&#10;WARNING:KeymapLoaderFW0.03  Unable to locate keymapCts.km &#10;loading keymapDefault.km&#10;&#10;Setting up fancy gui...&#10;            __&#10;           (  )&#10;            ||&#10;            ||&#10;        ___|""|__.._&#10;       /____________\&#10;       \____________/~~~. &#10;Welcome &lt;3&#10;// Starting GUI //&#10;&#10;&#10;</Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_0PK1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB"></Translation>
+        <Translation Language="PL">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_8X9X" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_P0LN" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Add Noti</Translation>
+        <Translation Language="PL">Restart</Translation>
+      </Text>
+      <Text Id="__SingleUse_HD6R" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Reset IOM</Translation>
+        <Translation Language="PL">Reset IOM</Translation>
+      </Text>
+      <Text Id="__SingleUse_KMLW" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Kill Noti</Translation>
+        <Translation Language="PL">Restart</Translation>
+      </Text>
+      <Text Id="__SingleUse_VH8X" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Summon</Translation>
+        <Translation Language="PL">Restart</Translation>
+      </Text>
+      <Text Id="ResourceId1" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+        <Translation Language="PL">##</Translation>
+      </Text>
+      <Text Id="__SingleUse_GMB0" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">New Text&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_62UB" Alignment="Center" TypographyId="Typo_inter_10px">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_T9B8" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
+        <Translation Language="PL">&lt;value&gt; %</Translation>
+      </Text>
+      <Text Id="__SingleUse_GIU1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_MBNE" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z52N" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_VYH6" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Reboot</Translation>
+        <Translation Language="PL">Restart</Translation>
+      </Text>
+      <Text Id="__SingleUse_MEGC" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Select vehicle adress:</Translation>
+        <Translation Language="PL">Wybierz pojazd:</Translation>
+      </Text>
+      <Text Id="__SingleUse_25NR" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Adress &lt;value&gt;</Translation>
+        <Translation Language="PL">Adres &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AJ44" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="PL">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_X6HY" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">TrailerName: "&lt;value&gt;"</Translation>
+        <Translation Language="PL">Naczepa  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_XO2P" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">TruckName: "&lt;value&gt;"</Translation>
+        <Translation Language="PL">NazwaCiężar &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="kadzejoo" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Szymon Podlak - &#10;Lead Programmer / UI designer</Translation>
+        <Translation Language="PL">KaDzejoo - Szymon Podlak - &#10;Lead Programmer / UI designer</Translation>
+      </Text>
+      <Text Id="authors" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Authors</Translation>
+        <Translation Language="PL">Authors :</Translation>
+      </Text>
+      <Text Id="__SingleUse_5WMW" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">RPM &lt;value&gt;</Translation>
+        <Translation Language="PL">RPM &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_19AD" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Speed &lt;value&gt;</Translation>
+        <Translation Language="PL">Speed &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_G0MO" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Gear &lt;value&gt;</Translation>
+        <Translation Language="PL">Gear &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CWUR" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Horn &lt;value&gt;</Translation>
+        <Translation Language="PL">Horn &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2MZA" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Gear Down &lt;value&gt;</Translation>
+        <Translation Language="PL">Gear Down &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_QTSZ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Gear Up &lt;value&gt;</Translation>
+        <Translation Language="PL">Gear Up &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_5WEO" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Fog R &lt;value&gt;</Translation>
+        <Translation Language="PL">Fog R &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2GH3" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Fog F &lt;value&gt;</Translation>
+        <Translation Language="PL">Fog F &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_S9Q3" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">RightBlinker &lt;value&gt;</Translation>
+        <Translation Language="PL">RightBlinker &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2YRQ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">LeftBlinker  &lt;value&gt;</Translation>
+        <Translation Language="PL">LeftBlinker  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JB6M" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Hazards  &lt;value&gt;</Translation>
+        <Translation Language="PL">Hazards  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JG7H" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Pos  &lt;value&gt;</Translation>
+        <Translation Language="PL">Pos  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_XXIK" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">LowBeams  &lt;value&gt;</Translation>
+        <Translation Language="PL">LowBeams  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z6LO" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">HighBeams  &lt;value&gt;</Translation>
+        <Translation Language="PL">HighBeams  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_33NR" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Truck type  &lt;value&gt;</Translation>
+        <Translation Language="PL">Truck type  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZPQD" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">TopLights  &lt;value&gt;</Translation>
+        <Translation Language="PL">TopLights  &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_MEP3" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">controller Data</Translation>
+        <Translation Language="PL">IOM Data</Translation>
+      </Text>
+      <Text Id="__SingleUse_63B8" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">IO</Translation>
+        <Translation Language="PL">Sterowanie</Translation>
+      </Text>
+      <Text Id="__SingleUse_OZVD" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Communication</Translation>
+        <Translation Language="PL">Komunikacja</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y8SO" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">GUI</Translation>
+        <Translation Language="PL">Interfejs</Translation>
+      </Text>
+      <Text Id="__SingleUse_WQ1U" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Full lock</Translation>
+        <Translation Language="PL">Pełna blokada</Translation>
+      </Text>
+      <Text Id="Gear" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">30</Translation>
+        <Translation Language="PL">6</Translation>
+      </Text>
+      <Text Id="__SingleUse_CR0S" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_D7KM" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Fork II</Translation>
+        <Translation Language="PL">Widelec II</Translation>
+      </Text>
+      <Text Id="__SingleUse_H95O" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Fork I</Translation>
+        <Translation Language="PL">Widelec I</Translation>
+      </Text>
+      <Text Id="__SingleUse_67V4" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Winch First</Translation>
+        <Translation Language="PL">Wyciągarka I</Translation>
+      </Text>
+      <Text Id="__SingleUse_0MQW" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Winch Second</Translation>
+        <Translation Language="PL">Wygiągarka II</Translation>
+      </Text>
+      <Text Id="__SingleUse_OO6V" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Right Support</Translation>
+        <Translation Language="PL">Prawa Podpora</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q2NN" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Left Support</Translation>
+        <Translation Language="PL">Lewa Podpowa</Translation>
+      </Text>
+      <Text Id="__SingleUse_ED5Z" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Arm I</Translation>
+        <Translation Language="PL">Ramię I</Translation>
+      </Text>
+      <Text Id="__SingleUse_O33W" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Arm II</Translation>
+        <Translation Language="PL">Ramię II</Translation>
+      </Text>
+      <Text Id="__SingleUse_EO96" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">can be later changed in settings</Translation>
+        <Translation Language="PL">Może być potem zmieniony w ustawienicah</Translation>
+      </Text>
+      <Text Id="__SingleUse_P3YS" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Choose desired language</Translation>
+        <Translation Language="PL">Wybierz język</Translation>
+      </Text>
+      <Text Id="__SingleUse_28AA" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Polish</Translation>
+        <Translation Language="PL">Polski</Translation>
+      </Text>
+      <Text Id="__SingleUse_LLS3" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">English</Translation>
+        <Translation Language="PL">Angielski</Translation>
+      </Text>
+      <Text Id="__SingleUse_TGMI" Alignment="Center" TypographyId="medium">
+        <Translation Language="GB">MAN</Translation>
+        <Translation Language="PL">MAN</Translation>
+      </Text>
+      <Text Id="__SingleUse_A297" Alignment="Center" TypographyId="medium">
+        <Translation Language="GB">Scania</Translation>
+        <Translation Language="PL">Scania</Translation>
+      </Text>
+      <Text Id="__SingleUse_MPMW" Alignment="Center" TypographyId="Typo_inter_10px">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">2&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_VOEU" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Gyro Steering</Translation>
+        <Translation Language="PL">Sterowanie żyropskopowe</Translation>
+      </Text>
+      <Text Id="__SingleUse_476I" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Audio Output</Translation>
+        <Translation Language="PL">Wyjscie audio</Translation>
+      </Text>
+      <Text Id="__SingleUse_02V0" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Raw UART data stream</Translation>
+        <Translation Language="PL">Raw UART data stream</Translation>
+      </Text>
+      <Text Id="__SingleUse_BWNJ" Alignment="Center" TypographyId="medium">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="PL">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_P3Z3" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">UART_RECIEVE_DEBUG tak jak powiedzial sam pan jezus : bogurodzica robi bica</Translation>
+        <Translation Language="PL">UART_RECIEVE_DEBUG tak jak powiedzial sam pan jezus : \nbogurodzica robi bica</Translation>
+      </Text>
+      <Text Id="__SingleUse_XFFL" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="PL">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="wUztruck2023" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">KN wUZtruck 2023/2024</Translation>
+        <Translation Language="PL">wUZtruck 2023</Translation>
+      </Text>
+      <Text Id="__SingleUse_9H72" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Joystick Deadzone</Translation>
+        <Translation Language="PL">Limit prędkosci</Translation>
+      </Text>
+      <Text Id="__SingleUse_0XQ0" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Steering smoothing </Translation>
+        <Translation Language="PL">Wygładzanie kierownicy</Translation>
+      </Text>
+      <Text Id="__SingleUse_8JA7" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Sensitivity in middle</Translation>
+        <Translation Language="PL">Czułosć srodkowa</Translation>
+      </Text>
+      <Text Id="__SingleUse_0PF8" Alignment="Left" TypographyId="typoNumber">
+        <Translation Language="GB">dwa</Translation>
+        <Translation Language="PL">dwa</Translation>
+      </Text>
+      <Text Id="__SingleUse_OZ5V" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">Joystick&#10;1&amp;2</Translation>
+        <Translation Language="PL">Dżojstik&#10;1&amp;2</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y7MG" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">TrigL</Translation>
+        <Translation Language="PL">TrigL</Translation>
+      </Text>
+      <Text Id="__SingleUse_NHWX" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">TrigR</Translation>
+        <Translation Language="PL">TrigR</Translation>
+      </Text>
+      <Text Id="__SingleUse_K276" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Joy2Y</Translation>
+        <Translation Language="PL">Joy2Y</Translation>
+      </Text>
+      <Text Id="__SingleUse_CU7A" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Joy2X</Translation>
+        <Translation Language="PL">Joy2X</Translation>
+      </Text>
+      <Text Id="__SingleUse_GSL4" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Joy1Y</Translation>
+        <Translation Language="PL">Joy1Y</Translation>
+      </Text>
+      <Text Id="__SingleUse_9FKX" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Joy1X</Translation>
+        <Translation Language="PL">Joy1X</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="lucon.TTF" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="0-9,a-z,A-Z" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="lucon.TTF" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="#" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="typoNumber" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="#" WildcardCharacterRanges="0x20-0x7E" />
+    <Typography Id="Typo_inter_10px" Font="consola.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="!”&quot;#*%&amp;()'$+-@_, .:;?/~±×÷•º`´{}©£€^®¥_=[]¡¢|\¿&gt;&lt;" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="medium" Font="verdana.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+  </Typographies>
+</TextDatabase>

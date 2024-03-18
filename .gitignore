@@ -1,32 +1,25 @@
-# Prerequisites
-*.d
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
 
-# Compiled Object files
-*.slo
-*.lo
+
+# 1. commit all changes
+# 2. git rm --cached .
+# 3. git add . 
+# and it should work <3
+
 *.o
-*.obj
+*.d
+*.cyclo
+*.su
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+TouchGFX/build/*
+TouchGFX/generated/*
+EWARM/settings/*
+EWARM/STM32F746/*
+STM32CubeIDE/Debug/STM32H735G-DK.elf
+.metadata
+*.o
